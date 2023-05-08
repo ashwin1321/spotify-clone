@@ -9,23 +9,23 @@ import ListSidebar from '../listSidebar';
 const index = () => {
 
     const icons = [{
-        title: 'home',
+        title: 'Home',
         icon: <AiFillHome size={30} />
     },
     {
-        title: 'search',
+        title: 'Search',
         icon: <AiOutlineSearch size={30} />
     },
     {
-        title: 'your library',
+        title: 'Your Library',
         icon: <BiLibrary size={30} />
     },
     {
-        title: 'create playlist',
+        title: 'Create Playlist',
         icon: <BsPlusSquare size={30} />
     },
     {
-        title: 'liked songs',
+        title: 'Liked Songs',
 
         icon: <AiFillHeart size={30} />
     }]
@@ -33,7 +33,7 @@ const index = () => {
 
 
     return (
-        <div className='p-4 d-flex flex-column gap-4  '>
+        <div className='p-4 d-flex flex-column gap-5 '>
 
             {/* logo */}
             <div className=' d-flex gap-2 ' >
