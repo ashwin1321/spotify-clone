@@ -5,6 +5,7 @@ import { BiLibrary } from 'react-icons/bi'
 import { BsPlusSquare } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 import ListSidebar from '../listSidebar';
+import './sidebar.css'
 
 const index = () => {
 
@@ -33,12 +34,12 @@ const index = () => {
 
 
     return (
-        <div className='p-4 d-flex flex-column gap-5 '>
+        <div className='p-4 d-flex flex-column gap-5 bg-black sidebar '>
 
             {/* logo */}
             <div className=' d-flex gap-2 ' >
-                <Image src={logo} fluid width={45} />
-                <h3 className='mt-2 '>Spotify</h3>
+                <Image src={logo} fluid width={50} />
+                <h3 className='mt-2 text-white '>Spotify</h3>
             </div>
 
             {/* menu */}

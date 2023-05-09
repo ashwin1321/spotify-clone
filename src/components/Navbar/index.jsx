@@ -1,29 +1,27 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { Container, Button } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { TbMathGreater, TbMathLower } from 'react-icons/tb';
+import './navbar.css';
 
 function ColorSchemesExample() {
     return (
         <>
-            <Navbar bg="rgb(120, 120, 120)" variant="dark">
+            <Navbar variant="dark" className='navbar'>
                 <Container>
-
-                    <Nav className="me-auto">
-                        <div className='d-flex  gap-3 align-items-center'>
-                            <div className='bg-0066cc'>
-                                {<TbMathLower size={20} />}
-                            </div>
-                            <div>
-                                {<TbMathGreater size={20} />}
-                            </div>
+                    <div className='d-flex h3 arrows gap-4 text-secondary '>
+                        <div className=''>
+                            {"<"}
                         </div>
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">Features</Nav.Link>
-                    </Nav>
+                        <div>
+                            {">"}
+                        </div>
+                    </div>
+                    <div className='buttons'>
+                        <Button variant="outline-light">Sign up</Button>
+                        <Button variant="light">Log in</Button>
+                    </div>
                 </Container>
-
             </Navbar>
         </>
     );

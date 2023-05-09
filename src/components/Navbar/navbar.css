@@ -1,0 +1,21 @@
+.navbar {
+  background-color: rgb(8, 8, 8);
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.arrows {
+  cursor: pointer;
+}
+
+.buttons Button {
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.nav-inside {
+  display: flex;
+  justify-content: space-between;
+}
