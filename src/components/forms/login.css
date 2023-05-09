@@ -1,0 +1,31 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: clip;
+}
+
+.aa {
+  text-decoration: underline !important;
+}
+
+.aa:hover {
+  color: rgb(24, 75, 24) !important;
+}
+
+.hr1 {
+  width: 100vw;
+}
+
+.hr2 {
+  width: 18vw;
+}
+
+.btn {
+  width: 17vw;
+}
+
+.btn:hover {
+  color: black !important;
+}

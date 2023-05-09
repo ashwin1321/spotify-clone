@@ -5,7 +5,7 @@ import "./footer.css"
 const index = () => {
     return (
         <>
-            <div className=" mt-5 d-flex justify-content-between ">
+            <div className=" mt-5 d-flex justify-content-between  ">
                 <div className="row w-75 " >
                     <div className="col-md-2 ">
                         <nav>
