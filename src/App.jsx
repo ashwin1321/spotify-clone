@@ -3,6 +3,7 @@ import Sidebar from './components/sidebar';
 import Navbar from './components/Navbar';
 import Footer from './components/footer';
 import LoginForm from './components/forms/loginForm';
+import SignInForm from './components/forms/signinForm';
 import './App.css';
 
 function HomePage() {
@@ -15,7 +16,8 @@ function HomePage() {
           <Footer />
         </div>
       </div> */}
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <SignInForm />
     </>
   );
 }
