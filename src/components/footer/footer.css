@@ -1,0 +1,25 @@
+a {
+  text-decoration: none !important;
+  color: rgb(185, 184, 184) !important;
+}
+a:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+hr {
+  width: 96%;
+  color: rgb(185, 184, 184) !important;
+  margin-left: 2% !important;
+}
+
+.row {
+  margin-left: 50px !important;
+}
+
+.icons {
+  margin-right: 50px !important;
+}
