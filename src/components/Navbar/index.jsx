@@ -10,10 +10,10 @@ function ColorSchemesExample() {
             <Navbar variant="dark" className='navbar d-flex justify-content-between'>
 
                 <div className='d-flex h3 arrows gap-4 text-secondary  '>
-                    <div className=''>
+                    <div className='arrow'>
                         {"<"}
                     </div>
-                    <div>
+                    <div className='arrow'>
                         {">"}
                     </div>
                 </div>

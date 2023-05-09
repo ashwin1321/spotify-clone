@@ -6,7 +6,7 @@ const index = () => {
     return (
         <>
             <div className=" mt-5 d-flex justify-content-between ">
-                <div className="row w-50 " >
+                <div className="row w-75 " >
                     <div className="col-md-2 ">
                         <nav>
                             <ul className=" list-unstyled ">
@@ -71,7 +71,7 @@ const index = () => {
                 </div>
 
                 <nav>
-                    <ul className="d-flex icons  gap-3 list-unstyled">
+                    <ul className="d-flex icons  gap-4 list-unstyled">
                         <li>
                             <a href="https://facebook.com" >
                                 <BsFacebook size={20} />

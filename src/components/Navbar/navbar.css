@@ -12,6 +12,10 @@
   margin-left: 50px;
 }
 
+.arrow:hover {
+  color: rgb(255, 255, 255) !important;
+}
+
 .buttons Button {
   border: none;
   cursor: pointer;
