@@ -7,7 +7,7 @@ const index = ({ icon, title }) => {
             <div>
                 {icon}
             </div>
-            <div>
+            <div >
                 {title}
             </div>
         </div>

@@ -11,24 +11,24 @@ const index = () => {
 
     const icons = [{
         title: 'Home',
-        icon: <AiFillHome size={30} />
+        icon: <AiFillHome size={25} />
     },
     {
         title: 'Search',
-        icon: <AiOutlineSearch size={30} />
+        icon: <AiOutlineSearch size={25} />
     },
     {
         title: 'Your Library',
-        icon: <BiLibrary size={30} />
+        icon: <BiLibrary size={25} />
     },
     {
         title: 'Create Playlist',
-        icon: <BsPlusSquare size={30} />
+        icon: <BsPlusSquare size={25} />
     },
     {
         title: 'Liked Songs',
 
-        icon: <AiFillHeart size={30} />
+        icon: <AiFillHeart size={25} />
     }]
 
 
@@ -43,7 +43,7 @@ const index = () => {
             </div>
 
             {/* menu */}
-            <div className='w-25' >
+            <div className='w-100' >
                 <ul className='list-unstyled '>
 
                     {icons.map((icon, index) => {
