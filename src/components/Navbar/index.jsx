@@ -7,21 +7,20 @@ import './navbar.css';
 function ColorSchemesExample() {
     return (
         <>
-            <Navbar variant="dark" className='navbar'>
-                <Container>
-                    <div className='d-flex h3 arrows gap-4 text-secondary '>
-                        <div className=''>
-                            {"<"}
-                        </div>
-                        <div>
-                            {">"}
-                        </div>
+            <Navbar variant="dark" className='navbar d-flex justify-content-between'>
+
+                <div className='d-flex h3 arrows gap-4 text-secondary  '>
+                    <div className=''>
+                        {"<"}
                     </div>
-                    <div className='buttons'>
-                        <Button variant="outline-light">Sign up</Button>
-                        <Button variant="light">Log in</Button>
+                    <div>
+                        {">"}
                     </div>
-                </Container>
+                </div>
+                <div className='buttons'>
+                    <Button variant="outline-light">Sign up</Button>
+                    <Button variant="light">Log in</Button>
+                </div>
             </Navbar>
         </>
     );

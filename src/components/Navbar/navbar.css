@@ -4,10 +4,12 @@
 .buttons {
   display: flex;
   gap: 10px;
+  margin-right: 50px;
 }
 
 .arrows {
   cursor: pointer;
+  margin-left: 50px;
 }
 
 .buttons Button {
