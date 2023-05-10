@@ -1,3 +1,20 @@
 .btnn {
   width: 20vw;
 }
+
+.formm {
+  width: 23vw !important;
+}
+
+.agree {
+  color: rgb(15, 88, 9) !important;
+  text-decoration: underline !important;
+}
+
+.agree:hover {
+  color: rgb(37, 141, 27) !important;
+}
+
+.sign {
+  width: 8vw !important;
+}

@@ -9,15 +9,15 @@ import './App.css';
 function HomePage() {
   return (
     <>
-      <div className="d-grid app">
+      {/* <div className="d-grid app">
         <Sidebar />
         <div className='content'>
           <Navbar />
           <Footer />
         </div>
-      </div>
-      <LoginForm />
-      {/* <SignInForm /> */}
+      </div> */}
+      {/* <LoginForm /> */}
+      <SignInForm />
     </>
   );
 }
