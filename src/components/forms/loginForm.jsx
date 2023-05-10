@@ -4,6 +4,7 @@ import { Image } from "react-bootstrap";
 import "./login.css";
 import logo from "../../assets/logo/spotify.png";
 import { BsFacebook, BsGoogle, BsApple } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 
 const loginForm = () => {
@@ -80,9 +81,12 @@ const loginForm = () => {
                 <hr className="hr2" />
                 <Container className="d-flex flex-column align-items-center">
                     <p className="text-center">Dont have an account?</p>
-                    <Button className="rounded-5 px-5" outline color="secondary">
-                        SIGN UP FOR SPOTIFY
-                    </Button>
+
+                    <Link to="/signup">
+                        <Button className="rounded-5 px-5" outline color="secondary">
+                            SIGN UP FOR SPOTIFY
+                        </Button>
+                    </Link>
                 </Container>
             </Container>
         </Container>

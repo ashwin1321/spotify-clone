@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Button } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 
 function ColorSchemesExample() {
@@ -18,10 +19,14 @@ function ColorSchemesExample() {
                     </div>
                 </div>
                 <div className='buttons'>
-                    <Button variant="outline-light" className="btn1">Sign up</Button>
-                    <Button variant="light" className="btn1">Log in</Button>
+                    <Link to='/signup'>
+                        <Button variant="outline-light" className="btn1">Sign up</Button>
+                    </Link>
+                    <Link to='/login'>
+                        <Button variant="light" className="btn1">Log in</Button>
+                    </Link>
                 </div>
-            </Navbar>
+            </Navbar >
         </>
     );
 }

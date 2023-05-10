@@ -6,6 +6,7 @@ import "./login.css";
 import "./signin.css";
 import logo from "../../assets/logo/spotify.png";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 
 const signinForm = () => {
@@ -116,13 +117,14 @@ const signinForm = () => {
                 </Container>
 
                 <Container className="d-flex  justify-content-center mt-4">
+
                     <Button className="bg-success text-dark rounded-5 sign mt-3 p-2   ">
                         SIGN UP
                     </Button>
                 </Container>
 
                 <Container className="d-flex  justify-content-center mt-4">
-                    <h6 className="text-center">Have an account? <a href="#" className="agree">Log in</a>.</h6>
+                    <h6 className="text-center">Have an account? <Link to="/login" className="agree">Log in</Link>.</h6>
                 </Container>
 
             </Form>
