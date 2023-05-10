@@ -14,7 +14,7 @@ const Home = () => {
         <div className="homePage px-4">
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3">Focus</h2>
+                    <h2 className="fw-bold fs-3 ms-5 mt-3">Focus</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"
@@ -41,7 +41,7 @@ const Home = () => {
             </Container>
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3">Spotify's Playlists</h2>
+                    <h2 className="fw-bold fs-3 ms-5 mt-4">Spotify's Playlists</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"

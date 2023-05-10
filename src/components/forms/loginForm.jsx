@@ -18,33 +18,43 @@ const loginForm = () => {
                     <hr className=" hr1" />
                     <h6 className="text-center mt-3">To continue, log in to Spotify.</h6>
 
-                    <Button className="rounded-5 px-5 btn bg-primary text-light" outline color="secondary" disabled>
-                        CONTINUE WITH FACEBOOK
+                    <Button className=" d-flex justify-content-between rounded-5 px-5 btn  text-light fb" >
+                        <BsFacebook className=" mt-1" />
+                        <div className="">
+                            CONTINUE WITH FACEBOOK
+                        </div>
                     </Button>
-                    <Button className="rounded-5 px-5 btn bg-body-secondary" outline color="secondary" disabled>
-                        CONTINUE WITH APPLE
+                    <Button className=" d-flex justify-content-between rounded-5 px-5 btn apple " >
+                        <BsApple className="mt-1 " />
+                        <div className="me-4">
+                            CONTINUE WITH APPLE
+                        </div>
                     </Button>
-                    <Button className="rounded-5 px-5 btn bg-body-tertiary" outline color="secondary" disabled>
-                        CONTINUE WITH GOOGLE
+                    <Button className="d-flex  justify-content-between rounded-5 px-5 btn google" >
+                        <BsGoogle className="mt-1" />
+                        <div>
+                            CONTINUE WITH GOOGLE
+                        </div>
                     </Button>
                     <div className="my-2">OR</div>
 
                 </div>
             </div>
 
-            <Form className="w-25">
+            <Form className=" loginForm">
                 <FormGroup>
                     <Label for="exampleEmail">Email address or username</Label>
-                    <Input name="email" placeholder="Enter your password" type="email" required />
+                    <Input name="email" placeholder="Enter your password" type="email" className=" bg-black text-white" required />
                 </FormGroup>
-                <FormGroup>
+                <FormGroup >
                     <Label for="examplePassword">Password</Label>
                     <Input
                         id="examplePassword"
                         name="password"
                         placeholder="Enter your password"
                         type="password"
-                        className="mb-2"
+                        className="mb-2 bg-black text-white"
+
                         required
                     />
                     <a href="#" className="aa ">

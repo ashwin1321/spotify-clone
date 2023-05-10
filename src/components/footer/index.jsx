@@ -4,8 +4,8 @@ import "./footer.css"
 
 const index = () => {
     return (
-        <div className="footer  ">
-            <div className=" mt-5 d-flex justify-content-between  ">
+        <div className="footer mt-5  ">
+            <div className=" mt-4 d-flex justify-content-between  ">
                 <div className="row w-75 " >
                     <div className="col-md-2 ">
                         <nav>

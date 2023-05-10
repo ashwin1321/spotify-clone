@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <Container fluid className="p-0">
+      {/* <Container fluid className="p-0">
         <Row className="m-0">
           <Col md={2} className="position-fixed p-0 ">
             <Sidebar />
@@ -23,8 +23,8 @@ function App() {
             <Footer />
           </Col>
         </Row>
-      </Container>
-      {/* <LoginForm /> */}
+      </Container> */}
+      <LoginForm />
       {/* <SignInForm /> */}
     </>
   );
