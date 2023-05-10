@@ -18,8 +18,8 @@ function ColorSchemesExample() {
                     </div>
                 </div>
                 <div className='buttons'>
-                    <Button variant="outline-light">Sign up</Button>
-                    <Button variant="light">Log in</Button>
+                    <Button variant="outline-light" className="btn1">Sign up</Button>
+                    <Button variant="light" className="btn1">Log in</Button>
                 </div>
             </Navbar>
         </>
