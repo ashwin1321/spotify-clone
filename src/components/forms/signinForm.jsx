@@ -37,7 +37,7 @@ const signinForm = () => {
                         <div className=" h5">or</div>
                         <div>-</div>
                     </div>
-                    <h5 className="text-center  ">Signup with your email addess</h5>
+                    <h5 className="text-center  ">Signup with your email address</h5>
                 </Container>
             </Container>
 
