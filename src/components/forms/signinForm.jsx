@@ -5,6 +5,7 @@ import { Image } from "react-bootstrap";
 import "./login.css";
 import "./signin.css";
 import logo from "../../assets/logo/spotify.png";
+import { BsFacebook, BsGoogle } from "react-icons/bs";
 
 
 const signinForm = () => {
@@ -18,11 +19,17 @@ const signinForm = () => {
                     </div>
                     <h3 className="text-center m-3 ">Sign up for free to start listening.</h3>
 
-                    <Button className="rounded-5 px-5 py-2 btnn bg-primary text-light" outline color="secondary" disabled>
-                        SIGN UP WITH FACEBOOK
+                    <Button className=" d-flex justify-content-between rounded-5 px-5  text-light fb" >
+                        <BsFacebook className=" mt-1" />
+                        <div className="">
+                            CONTINUE WITH FACEBOOK
+                        </div>
                     </Button>
-                    <Button className="rounded-5 px-5  py-2 btnn bg-body-tertiary" outline color="secondary" disabled>
-                        SIGN UP WITH GOOGLE
+                    <Button className="d-flex  justify-content-between rounded-5 px-5  google" >
+                        <BsGoogle className="mt-1" />
+                        <div className="me-3">
+                            CONTINUE WITH GOOGLE
+                        </div>
                     </Button>
                     <div className=" h5">or</div>
                     <h5 className="text-center  ">Signup with your email addess</h5>
@@ -32,19 +39,19 @@ const signinForm = () => {
             <Form className="formm ">
                 <FormGroup>
                     <Label for="email">What's your email?</Label>
-                    <Input name="email" placeholder="Enter your email." id="email" type="email" required />
+                    <Input name="email" placeholder="Enter your email." id="email" type="email" className="bg-black text-white" required />
                 </FormGroup>
 
                 <FormGroup>
                     <Label for="password">Create a password</Label>
                     <Input
-                        name="password" placeholder="Create a password." type="password" className="mb-2" required />
+                        name="password" placeholder="Create a password." type="password" className="mb-2 bg-black text-white " required />
                 </FormGroup>
 
                 <FormGroup>
                     <Label for="username">What Should we call you?</Label>
                     <Input
-                        name="text" placeholder="Enter your profile name." type="username" className="mb-2" required />
+                        name="text" placeholder="Enter your profile name." type="username" className="mb-2 bg-black text-white" required />
                     <a href="#" >
                         This appears on your profile.
                     </a>
@@ -53,7 +60,7 @@ const signinForm = () => {
                 <FormGroup>
                     <Label for="dob">What's your date of birth?</Label>
                     <Input
-                        name="date" placeholder="Enter your date of birth." type="date" className="mb-2" required />
+                        name="date" placeholder="Enter your date of birth." type="date" className="mb-2 bg-black text-white" required />
                 </FormGroup>
 
                 <FormGroup>

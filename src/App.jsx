@@ -24,8 +24,8 @@ function App() {
           </Col>
         </Row>
       </Container> */}
-      <LoginForm />
-      {/* <SignInForm /> */}
+      {/* <LoginForm /> */}
+      <SignInForm />
     </>
   );
 }
