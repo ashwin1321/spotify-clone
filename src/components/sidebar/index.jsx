@@ -9,7 +9,7 @@ import './sidebar.css'
 
 const index = () => {
 
-    const icons = [{
+    const icons1 = [{
         title: 'Home',
         icon: <AiFillHome size={25} />
     },
@@ -20,21 +20,21 @@ const index = () => {
     {
         title: 'Your Library',
         icon: <BiLibrary size={25} />
-    },
-    {
+    }]
+
+    const icons2 = [{
         title: 'Create Playlist',
         icon: <BsPlusSquare size={25} />
     },
     {
         title: 'Liked Songs',
-
         icon: <AiFillHeart size={25} />
     }]
 
 
 
     return (
-        <div className='p-4 d-flex flex-column gap-5 bg-black sidebar '>
+        <div className='p-4 d-flex flex-column gap-5 bg-black sidebar vh-100'>
 
             {/* logo */}
             <div className=' d-flex gap-2 ' >
@@ -43,19 +43,31 @@ const index = () => {
             </div>
 
             {/* menu */}
-            <div className='w-100' >
+            <div className='w-100 ' >
                 <ul className='list-unstyled '>
 
-                    {icons.map((icon, index) => {
+                    {icons1.map((icon, index) => {
                         return (
                             <li key={index}  >
                                 <ListSidebar icon={icon.icon} title={icon.title} />
-                                <br />
                             </li>
                         )
                     })}
 
                 </ul>
+                <br />
+                <ul className='list-unstyled '>
+
+                    {icons2.map((icon, index) => {
+                        return (
+                            <li key={index}  >
+                                <ListSidebar icon={icon.icon} title={icon.title} />
+                            </li>
+                        )
+                    })}
+
+                </ul>
+
 
             </div>
 

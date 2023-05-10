@@ -23,3 +23,8 @@ hr {
 .icons {
   margin-right: 50px !important;
 }
+
+.footer {
+  padding-top: 20px;
+  background-color: black;
+}

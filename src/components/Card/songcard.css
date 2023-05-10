@@ -1,0 +1,42 @@
+.cardComp {
+  background-color: #191919 !important;
+}
+
+.cardComp:hover {
+  background-color: #292928 !important;
+}
+
+.cardSubtitle {
+  color: #747474 !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+}
+
+.playButton {
+  background-color: #1ed661 !important;
+  width: 50px !important;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.2s ease-in-out !important;
+}
+
+.cardComp:hover .playButton {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.playButton:hover {
+  scale: 1.1;
+  background-color: #1ce265 !important;
+}
+
+.playButton:active {
+  scale: 1;
+  opacity: 0.8;
+}

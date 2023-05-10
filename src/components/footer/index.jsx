@@ -4,7 +4,7 @@ import "./footer.css"
 
 const index = () => {
     return (
-        <>
+        <div className="footer  ">
             <div className=" mt-5 d-flex justify-content-between  ">
                 <div className="row w-75 " >
                     <div className="col-md-2 ">
@@ -92,10 +92,10 @@ const index = () => {
 
             </div>
             <hr />
-            <footer className="m-5">
+            <footer className="p-5">
                 <p>&copy; 2023 Spotify AB</p>
             </footer>
-        </>
+        </div>
     );
 };
 

@@ -7,7 +7,7 @@ import './navbar.css';
 function ColorSchemesExample() {
     return (
         <>
-            <Navbar variant="dark" className='navbar d-flex justify-content-between p-3'>
+            <Navbar variant="dark" className='navbar d-flex justify-content-between p-3 ' sticky='top'>
 
                 <div className='d-flex h3 arrows gap-4 text-secondary  '>
                     <div className='arrow'>
