@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { Image } from "react-bootstrap";
 import "./login.css";
 import logo from "../../assets/logo/spotify.png";
@@ -8,9 +8,9 @@ import { BsFacebook, BsGoogle, BsApple } from "react-icons/bs";
 
 const loginForm = () => {
     return (
-        <div className="container login  ">
-            <div className="mt-5">
-                <div className="d-flex flex-column align-items-center gap-3">
+        <Container className=" login  ">
+            <Container className="mt-5">
+                <Container className="d-flex flex-column align-items-center gap-3">
                     <div className=" d-flex gap-3 ">
                         <Image src={logo} fluid width={50} />
                         <h3 className="mt-2 text-white ">Spotify</h3>
@@ -36,10 +36,14 @@ const loginForm = () => {
                             CONTINUE WITH GOOGLE
                         </div>
                     </Button>
-                    <div className="my-2">OR</div>
+                    <div className="d-flex gap-3 my-3">
+                        <div>-</div>
+                        <div className="">or</div>
+                        <div>-</div>
+                    </div>
 
-                </div>
-            </div>
+                </Container>
+            </Container>
 
             <Form className=" loginForm">
                 <FormGroup>
@@ -61,7 +65,7 @@ const loginForm = () => {
                         Forgot your password?
                     </a>
                 </FormGroup>
-                <div className="d-flex gap-5 justify-content-between align-content-center text-center">
+                <Container className="d-flex gap-5 justify-content-between align-content-center text-center">
                     <div className="d-flex ">
                         <input type="checkbox" className="checkbox" />
                         <label className="p-2 ">Remember me</label>
@@ -69,19 +73,19 @@ const loginForm = () => {
                     <Button className="bg-success text-dark rounded-5 w-25  ">
                         LOG IN
                     </Button>
-                </div>
+                </Container>
             </Form>
             <br />
-            <div className="d-flex flex-column justify-content-center align-items-center mt-2">
+            <Container className="d-flex flex-column justify-content-center align-items-center mt-2">
                 <hr className="hr2" />
-                <div className="d-flex flex-column align-items-center">
+                <Container className="d-flex flex-column align-items-center">
                     <p className="text-center">Dont have an account?</p>
                     <Button className="rounded-5 px-5" outline color="secondary">
                         SIGN UP FOR SPOTIFY
                     </Button>
-                </div>
-            </div>
-        </div>
+                </Container>
+            </Container>
+        </Container>
     );
 };
 

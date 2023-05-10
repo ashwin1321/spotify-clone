@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { Image } from "react-bootstrap";
 import "./login.css";
 import "./signin.css";
@@ -10,9 +10,9 @@ import { BsFacebook, BsGoogle } from "react-icons/bs";
 
 const signinForm = () => {
     return (
-        <div className="container login  ">
-            <div className="mt-5 mb-3">
-                <div className="d-flex flex-column align-items-center gap-3">
+        <Container className=" login  ">
+            <Container className="mt-5 mb-3">
+                <Container className="d-flex flex-column align-items-center gap-3">
                     <div className=" d-flex gap-3 ">
                         <Image src={logo} fluid width={50} />
                         <h3 className="mt-2 text-white ">Spotify</h3>
@@ -31,10 +31,14 @@ const signinForm = () => {
                             CONTINUE WITH GOOGLE
                         </div>
                     </Button>
-                    <div className=" h5">or</div>
+                    <div className="d-flex gap-4">
+                        <div className="w-25">-</div>
+                        <div className=" h5">or</div>
+                        <div>-</div>
+                    </div>
                     <h5 className="text-center  ">Signup with your email addess</h5>
-                </div>
-            </div>
+                </Container>
+            </Container>
 
             <Form className="formm ">
                 <FormGroup>
@@ -94,7 +98,7 @@ const signinForm = () => {
 
                 </FormGroup>
 
-                <div className="d-flex flex-column gap-1 mt-4 justify-content-between align-content-center">
+                <Container className="d-flex flex-column gap-1 mt-4 justify-content-between align-content-center">
                     <div className="d-flex gap-2 ">
                         <Input type="checkbox" className="checkbox" id="checkbox1" />
                         <Label for="checkbox1">Send me updates about Spotify</Label>
@@ -109,21 +113,21 @@ const signinForm = () => {
                         <Input type="checkbox" className="checkbox" id="checkbox3" />
                         <Label for="checkbox3">I agree to the <a href="#" className="agree">Terms and Conditions</a> and <a href="#" className="agree">Privacy Policy</a>.</Label>
                     </div>
-                </div>
+                </Container>
 
-                <div className="d-flex  justify-content-center mt-4">
+                <Container className="d-flex  justify-content-center mt-4">
                     <Button className="bg-success text-dark rounded-5 sign mt-3 p-2   ">
                         SIGN UP
                     </Button>
-                </div>
+                </Container>
 
-                <div className="d-flex  justify-content-center mt-4">
+                <Container className="d-flex  justify-content-center mt-4">
                     <h6 className="text-center">Have an account? <a href="#" className="agree">Log in</a>.</h6>
-                </div>
+                </Container>
 
             </Form>
 
-        </div>
+        </Container>
     );
 };
 
