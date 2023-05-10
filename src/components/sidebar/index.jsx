@@ -28,7 +28,7 @@ const index = () => {
     },
     {
         title: 'Liked Songs',
-        icon: <AiFillHeart size={25} />
+        icon: <AiFillHeart size={25} color='#b03333' />
     }]
 
 
