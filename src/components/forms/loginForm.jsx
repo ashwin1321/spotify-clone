@@ -1,13 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { Image } from "react-bootstrap";
+import { Alert } from "reactstrap"
 import "./login.css";
 import logo from "../../assets/logo/spotify.png";
 import { BsFacebook, BsGoogle, BsApple } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../utils/firebase"
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 
 const loginForm = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const navigate = useNavigate();
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [email, setEmail] = useState("");
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [password, setPassword] = useState("");
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isEmailError, setIsEmailError] = useState(false);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [isPasswordError, setIsPasswordError] = useState(false);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [visible, setVisible] = useState(true);
+    const onDismiss = () => setVisible(false);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [visible1, setVisible1] = useState(true);
+    const onDismiss1 = () => setVisible1(false);
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                var user = userCredential.user;
+                console.log(`user logged in`, user);
+                navigate(0)
+
+            })
+            .catch((error) => {
+                console.error(`login error`, error.code);
+
+                if (error.code === "auth/user-not-found") {
+                    setIsEmailError(true);
+                    setVisible(true);
+                }
+
+                if (error.code === "auth/wrong-password") {
+                    setIsPasswordError(true);
+                    setVisible1(true);
+                }
+
+
+            });
+    }
+
     return (
         <Container className=" login  ">
             <Container className="mt-5">
@@ -46,10 +96,14 @@ const loginForm = () => {
                 </Container>
             </Container>
 
-            <Form className=" loginForm">
+            <Form className=" loginForm" onSubmit={handleLogin}>
                 <FormGroup>
                     <Label for="exampleEmail">Email address or username</Label>
-                    <Input name="email" placeholder="Enter your password" type="email" className=" bg-black text-white" required />
+                    <Input name="email" placeholder="Enter your password" type="email" className=" bg-black text-white"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required />
+                    {isEmailError ? <Alert color="danger" isOpen={visible} toggle={onDismiss} className="mt-2">user not found</Alert> : null}
                 </FormGroup>
                 <FormGroup >
                     <Label for="examplePassword">Password</Label>
@@ -59,9 +113,11 @@ const loginForm = () => {
                         placeholder="Enter your password"
                         type="password"
                         className="mb-2 bg-black text-white"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required />
+                    {isPasswordError ? <Alert color="danger" isOpen={visible1} toggle={onDismiss1} className="mt-2">wrong password</Alert> : null}
 
-                        required
-                    />
                     <a href="#" className="aa ">
                         Forgot your password?
                     </a>

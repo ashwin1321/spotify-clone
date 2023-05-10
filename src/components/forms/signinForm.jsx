@@ -45,12 +45,12 @@ const signinForm = () => {
             })
             .catch((error) => {
                 console.log('Signup error:', error);
-                if (error == "FirebaseError: Firebase: Error (auth/email-already-in-use).") {
+                if (error.code === "auth/email-already-in-use") {
                     setEmailError(true);
                     setVisible(true);
                 }
 
-                if (error == "FirebaseError: Firebase: Password should be at least 6 characters (auth/weak-password).") {
+                if (error.code == "auth/weak-password") {
                     setPasswordError(true);
                     setVisible1(true);
                 }
