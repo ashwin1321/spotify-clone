@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { Image } from "react-bootstrap";
 import { Alert } from "reactstrap"
@@ -99,7 +99,7 @@ const loginForm = () => {
             <Form className=" loginForm" onSubmit={handleLogin}>
                 <FormGroup>
                     <Label for="exampleEmail">Email address or username</Label>
-                    <Input name="email" placeholder="Enter your password" type="email" className=" bg-black text-white"
+                    <Input name="email" placeholder="Enter your Email" type="email" className=" bg-black text-white"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required />
