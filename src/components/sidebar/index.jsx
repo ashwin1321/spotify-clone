@@ -5,30 +5,36 @@ import { BiLibrary } from 'react-icons/bi'
 import { BsPlusSquare } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 import ListSidebar from '../listSidebar';
+import { Link, NavLink } from 'react-router-dom'
 import './sidebar.css'
 
 const index = () => {
 
     const icons1 = [{
         title: 'Home',
-        icon: <AiFillHome size={25} />
+        icon: <AiFillHome size={25} />,
+        navTO: '/'
     },
     {
         title: 'Search',
-        icon: <AiOutlineSearch size={25} />
+        icon: <AiOutlineSearch size={25} />,
+        navTO: '/search'
     },
     {
         title: 'Your Library',
-        icon: <BiLibrary size={25} />
+        icon: <BiLibrary size={25} />,
+        navTO: '#'
     }]
 
     const icons2 = [{
         title: 'Create Playlist',
-        icon: <BsPlusSquare size={25} />
+        icon: <BsPlusSquare size={25} />,
+        navTO: '#'
     },
     {
         title: 'Liked Songs',
-        icon: <AiFillHeart size={25} color='#b03333' />
+        icon: <AiFillHeart size={25} color='#b03333' />,
+        navTO: '#'
     }]
 
 
@@ -48,9 +54,11 @@ const index = () => {
 
                     {icons1.map((icon, index) => {
                         return (
-                            <li key={index}  >
-                                <ListSidebar icon={icon.icon} title={icon.title} />
-                            </li>
+                            <NavLink key={index} to={icon.navTO} id='activee' >
+                                <li  >
+                                    <ListSidebar icon={icon.icon} title={icon.title} />
+                                </li>
+                            </NavLink>
                         )
                     })}
 

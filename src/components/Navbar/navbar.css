@@ -29,3 +29,13 @@
 .btn1 {
   width: 6vw !important;
 }
+
+.search {
+  width: 25vw !important;
+  border: none !important;
+  border-radius: 50px !important;
+}
+
+.search:focus {
+  box-shadow: none !important;
+}

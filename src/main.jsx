@@ -9,6 +9,7 @@ import HomePage from './page/Homepage/index';
 import LoginForm from './components/forms/loginForm';
 import SignInForm from './components/forms/signinForm';
 import ErrorPage from './page/ErrorPage.jsx';
+import SearchPage from './page/SearchPage';
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,8 @@ const router = createBrowserRouter([
 
     children: [
       { path: '/', element: <HomePage /> },
+      { path: '/search', element: <SearchPage /> },
+      { path: '/search/:id', element: <SearchPage /> },
 
     ]
 
