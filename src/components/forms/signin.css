@@ -1,9 +1,5 @@
-.btnn {
-  width: 20vw;
-}
-
 .formm {
-  width: 23vw !important;
+  width: 22vw !important;
 }
 
 .agree {
@@ -17,4 +13,8 @@
 
 .sign {
   width: 8vw !important;
+}
+
+.btnn {
+  width: 21vw !important;
 }

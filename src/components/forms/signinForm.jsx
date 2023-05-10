@@ -72,13 +72,13 @@ const signinForm = () => {
                     </div>
                     <h3 className="text-center m-3 ">Sign up for free to start listening.</h3>
 
-                    <Button className=" d-flex justify-content-between rounded-5 px-5  text-light fb" >
+                    <Button className=" btnn d-flex justify-content-around rounded-5 px-5  text-light fb" >
                         <BsFacebook className=" mt-1" />
                         <div className="">
                             CONTINUE WITH FACEBOOK
                         </div>
                     </Button>
-                    <Button className="d-flex  justify-content-between rounded-5 px-5  google" >
+                    <Button className="d-flex btnn justify-content-around rounded-5 px-5  google" >
                         <BsGoogle className="mt-1" />
                         <div className="me-3">
                             CONTINUE WITH GOOGLE

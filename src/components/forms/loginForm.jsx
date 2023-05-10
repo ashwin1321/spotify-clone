@@ -71,7 +71,7 @@ const loginForm = () => {
 
                     <Button className=" d-flex justify-content-between rounded-5 px-5 btn  text-light fb" >
                         <BsFacebook className=" mt-1" />
-                        <div className="">
+                        <div className="ms-3">
                             CONTINUE WITH FACEBOOK
                         </div>
                     </Button>
@@ -83,7 +83,7 @@ const loginForm = () => {
                     </Button>
                     <Button className="d-flex  justify-content-between rounded-5 px-5 btn google" >
                         <BsGoogle className="mt-1" />
-                        <div>
+                        <div className="me-2">
                             CONTINUE WITH GOOGLE
                         </div>
                     </Button>
