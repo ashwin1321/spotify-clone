@@ -7,12 +7,14 @@ import "./login.css";
 import "./signin.css";
 import logo from "../../assets/logo/spotify.png";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../utils/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
 const signinForm = () => {
+
+    const navigate = useNavigate();
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [email, setEmail] = useState("");
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -41,6 +43,8 @@ const signinForm = () => {
                 const user = userCredential.user;
                 alert("Signup successful!")
                 console.log("user signed in", user);
+                navigate("/login")
+
 
             })
             .catch((error) => {
