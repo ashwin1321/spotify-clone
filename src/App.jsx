@@ -9,8 +9,8 @@ import { Container, Row, Col } from 'reactstrap';
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import './App.css';
 
-
 function App() {
+
   return (
     <>
 
