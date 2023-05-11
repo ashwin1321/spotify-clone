@@ -71,20 +71,22 @@ const index = () => {
                 </div>
 
                 <nav>
-                    <ul className="d-flex icons  gap-4 list-unstyled">
+                    <ul className="d-flex icons  gap-2 list-unstyled">
                         <li>
-                            <a href="https://facebook.com" >
-                                <BsFacebook size={20} />
+                            <a href="https://instagram.com" className="p-2 rounded-5 bg-dark">
+                                <BsInstagram size={20} className="mb-1" />
                             </a>
                         </li>
+
                         <li>
-                            <a href="https://twitter.com">
-                                <BsTwitter size={20} />
+                            <a href="https://twitter.com" className="p-2 rounded-5 bg-dark">
+                                <BsTwitter size={20} className="mb-1" />
                             </a>
                         </li>
+
                         <li>
-                            <a href="https://instagram.com">
-                                <BsInstagram size={20} />
+                            <a href="https://facebook.com" className="p-2 rounded-5 bg-dark" >
+                                <BsFacebook size={20} className="mb-1" />
                             </a>
                         </li>
                     </ul>
