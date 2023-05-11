@@ -3,7 +3,7 @@ import {
 } from "reactstrap";
 import SongCard from "../../components/Card/SongCard";
 import "./songcard.css"
-import { albums } from "../../assets/data/spotify";
+import { albums, songs } from "../../assets/data/spotify";
 
 const SearchPage = () => {
 
@@ -30,9 +30,24 @@ const SearchPage = () => {
     const shuffledAlbumList = shuffleArray(albumList);
 
 
+
+    const songsList = songs.song.map(song => {
+        const title = song.title;
+        const artist = song.artist;
+        const album = song.album;
+        const duration = song.duration;
+
+        const fileName = song.image.fileName;
+        const format = song.image.format;
+        const imageData = song.image.data;
+        const imgTags = `data:${format};base64,${imageData}`;
+
+        return { title, artist, album, duration, fileName, format, imgTags };
+    });
+
+
     return (
         <div className="homePage px-4">
-
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
                     <h2 className="fw-bold fs-3  mt-4">Albums</h2>
@@ -47,6 +62,7 @@ const SearchPage = () => {
                     </a>
                 </div>
                 <div className="mt-3 cards gap-5 px-1">
+
                     {shuffledAlbumList.map((album, i) => (
                         <SongCard
                             key={i}
@@ -56,6 +72,7 @@ const SearchPage = () => {
                             subtitle={album.artists}
                         />
                     ))}
+
                     {shuffledAlbumList.map((album, i) => (
                         <SongCard
                             key={i}
