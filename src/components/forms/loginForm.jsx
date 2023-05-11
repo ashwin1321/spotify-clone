@@ -8,6 +8,8 @@ import { BsFacebook, BsGoogle, BsApple } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../utils/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRecoilState } from "recoil";
+import { user } from "../../recoil/recoilState";
 
 
 const loginForm = () => {
@@ -31,6 +33,9 @@ const loginForm = () => {
     const [visible1, setVisible1] = useState(true);
     const onDismiss1 = () => setVisible1(false);
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [loggedIn, setLoggedIn] = useRecoilState(user);
+
     const handleLogin = (e) => {
         e.preventDefault();
 
@@ -44,6 +49,7 @@ const loginForm = () => {
                     uid: user.uid,
                     accessToken: user.accessToken,
                 };
+                setLoggedIn(userdetail);
                 sessionStorage.setItem("user", JSON.stringify(userdetail));
                 navigate("/")
 

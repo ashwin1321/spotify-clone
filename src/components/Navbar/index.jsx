@@ -5,12 +5,16 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import './navbar.css';
 import { Input } from 'reactstrap';
+import Avatar from '../Card/Avatar';
+import { useRecoilValue } from 'recoil';
+import { user } from '../../recoil/recoilState'
 
 function ColorSchemesExample() {
     const navigate = useNavigate();
     const page = useMatch('/search/*');
     const [search, setSearch] = useState('');
-    console.log(search)
+
+    const loggedIn = useRecoilValue(user);
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
@@ -36,14 +40,17 @@ function ColorSchemesExample() {
                         onChange={handleSearch} />
                 </div> : null}
 
-                <div className='buttons'>
-                    <Link to='/signup'>
-                        <Button variant="outline-light" className="btn1">Sign up</Button>
-                    </Link>
-                    <Link to='/login'>
-                        <Button variant="light" className="btn1">Log in</Button>
-                    </Link>
-                </div>
+                {loggedIn ? <Avatar /> :
+
+                    <div className='buttons'>
+                        <Link to='/signup'>
+                            <Button variant="outline-light" className="btn1">Sign up</Button>
+                        </Link>
+                        <Link to='/login'>
+                            <Button variant="light" className="btn1">Log in</Button>
+                        </Link>
+                    </div>
+                }
             </Navbar >
         </>
     );

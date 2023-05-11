@@ -1,0 +1,17 @@
+.btn11 {
+  border: none !important;
+  margin-right: 20px;
+  border-radius: 50px !important;
+  width: 7vw !important;
+  text-align: center;
+  background: #202020 !important;
+}
+
+.btn11:hover {
+  background: #c4bfbf !important;
+  border: 0.5px solid #c9c7c7 !important;
+}
+
+.avatar {
+  margin-right: 0px !important;
+}
