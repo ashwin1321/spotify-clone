@@ -23,6 +23,19 @@ const Home = () => {
         return { albumName, artists, releaseDate, coverImage, albumUrl };
     });
 
+    // Shuffle array function (Fisher-Yates algorithm)
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Shuffle the albumList array and select a desired number of random elements
+    const shuffledAlbumList = shuffleArray(albumList);
+
+
     return (
         <div className="homePage px-4">
             <Container fluid className="p-0 my-4">
@@ -39,7 +52,7 @@ const Home = () => {
                     </a>
                 </div>
                 <div className="mt-3 cards gap-4 px-1">
-                    {albumList.slice(0, 6).map((album, i) => (
+                    {shuffledAlbumList.slice(0, 6).map((album, i) => (
                         <SongCard
                             key={i}
                             id={i}
@@ -65,7 +78,7 @@ const Home = () => {
                     </a>
                 </div>
                 <div className="mt-3 cards gap-5 px-1">
-                    {albumList.slice(0, 6).reverse().map((album, i) => (
+                    {shuffledAlbumList.slice(0, 6).reverse().map((album, i) => (
                         <SongCard
                             key={i}
                             id={i}
