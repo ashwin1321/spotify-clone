@@ -12,13 +12,17 @@ import avatar from "../../assets/image/avatar.jpg";
 import "./avatar.css";
 import { FiDownload } from "react-icons/fi"
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { user } from "../../recoil/recoilState";
 
 const Avatar = () => {
     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
+    const [loggedIn, setLoggedIn] = useRecoilState(user);
 
     const logout = () => {
         sessionStorage.removeItem("user");
+        setLoggedIn(false);
         navigate("/login");
     };
 
