@@ -73,6 +73,17 @@ const SearchPage = () => {
                         />
                     ))}
 
+                    {/* {songsList.map((song, i) => (
+                        <SongCard
+
+                            key={i}
+                            id={i}
+                            imgSrc={song.imgTags}
+                            title={song.title}
+                            subtitle={song.artist}
+                        />
+                    ))} */}
+
                     {shuffledAlbumList.map((album, i) => (
                         <SongCard
                             key={i}
