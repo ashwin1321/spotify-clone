@@ -1,12 +1,4 @@
-import {
-    Button,
-    Card,
-    CardBody,
-    CardText,
-    Col,
-    Container,
-    Row,
-} from "reactstrap";
+import { Container } from "reactstrap";
 import SongCard from "../../components/Card/SongCard";
 import { albums } from "../../assets/data/spotify";
 import './homepage.css'

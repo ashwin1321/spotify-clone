@@ -11,6 +11,7 @@ import SignInForm from './components/forms/signinForm';
 import ErrorPage from './page/ErrorPage.jsx';
 import SearchPage from './page/SearchPage';
 import { RecoilRoot } from 'recoil';
+import ProtectedRoute from './routes/ProtectedRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,13 +29,14 @@ const router = createBrowserRouter([
     ]
 
   },
+
   {
     path: '/login',
-    element: <LoginForm />
+    element: <ProtectedRoute> <LoginForm /></ProtectedRoute>
   },
   {
     path: '/signup',
-    element: <SignInForm />
+    element: <ProtectedRoute> <SignInForm /></ProtectedRoute>
   }
 
 ])
