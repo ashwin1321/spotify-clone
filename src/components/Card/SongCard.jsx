@@ -13,7 +13,7 @@ const PlaylistCard = ({ id, imgSrc, title, subtitle }) => {
                     </Button>
                 </div>
                 <CardBody className="m-0 p-0 mt-4">
-                    <CardText className="m-0 fw-bold fs-5 text-white">{title}</CardText>
+                    <CardText className="m-0 fw-bold fs-5 cardtitle text-white">{title}</CardText>
                     <CardText className="cardSubtitle m-0">{subtitle}</CardText>
                 </CardBody>
             </Card>

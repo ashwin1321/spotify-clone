@@ -6,13 +6,22 @@
   background-color: #292928 !important;
 }
 
+.cardtitle {
+  color: #fff !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 1;
+}
+
 .cardSubtitle {
   color: #747474 !important;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
 }
 
 .playButton {
