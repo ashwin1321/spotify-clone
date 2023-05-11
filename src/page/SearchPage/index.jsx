@@ -56,7 +56,7 @@ const SearchPage = () => {
                 <div className="mt-3 cards gap-5 px-1">
 
                     {Array.from({ length: 3 }, () => (
-                        shuffledAlbumList.map((album, index) => (
+                        shuffledAlbumList.slice(0, 9).map((album, index) => (
                             <SongCard
                                 key={index}
                                 id={index}
@@ -66,17 +66,6 @@ const SearchPage = () => {
                             />
                         ))
                     ))}
-                    {/* {songsList.map((song, i) => (
-                        <SongCard
-
-                            key={i}
-                            id={i}
-                            imgSrc={song.imgTags}
-                            title={song.title}
-                            subtitle={song.artist}
-                        />
-                    ))} */}
-
 
                 </div>
             </Container>
