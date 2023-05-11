@@ -5,10 +5,13 @@ import { BiLibrary } from 'react-icons/bi'
 import { BsPlusSquare } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 import ListSidebar from '../listSidebar';
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import './sidebar.css'
 
 const index = () => {
+
+    const location = useLocation();
+    console.log(location.pathname)
 
     const icons1 = [{
         title: 'Home',
@@ -54,7 +57,7 @@ const index = () => {
 
                     {icons1.map((icon, index) => {
                         return (
-                            <NavLink key={index} to={icon.navTO} id='activee' >
+                            <NavLink key={index} to={icon.navTO} id='activee' className={`${location.pathname == icon.navTO && "text-white"} `} >
                                 <li  >
                                     <ListSidebar icon={icon.icon} title={icon.title} />
                                 </li>
