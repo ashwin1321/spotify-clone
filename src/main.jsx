@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import { RouterProvider, createBrowserRouter, useNavigate } from 'react-router-dom';
 import HomePage from './page/Homepage/index';
-import LoginForm from './components/forms/loginForm';
-import SignInForm from './components/forms/signinForm';
+import LoginForm from './page/forms/loginForm';
+import SignInForm from './page/forms/signinForm';
 import ErrorPage from './page/ErrorPage.jsx';
 import SearchPage from './page/SearchPage';
 import { RecoilRoot } from 'recoil';
