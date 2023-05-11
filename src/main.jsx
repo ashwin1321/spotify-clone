@@ -10,6 +10,7 @@ import LoginForm from './components/forms/loginForm';
 import SignInForm from './components/forms/signinForm';
 import ErrorPage from './page/ErrorPage.jsx';
 import SearchPage from './page/SearchPage';
+import { RecoilRoot } from 'recoil';
 
 
 const router = createBrowserRouter([
@@ -39,8 +40,8 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <RecoilRoot>
     <RouterProvider router={router} />
 
-  </React.StrictMode >,
+  </RecoilRoot>
 )

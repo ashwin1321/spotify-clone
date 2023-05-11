@@ -38,23 +38,31 @@ const loginForm = () => {
             .then((userCredential) => {
                 var user = userCredential.user;
                 console.log(`user logged in`, user);
-                navigate(0)
+
+                const userdetail = {
+                    email: user.email,
+                    uid: user.uid,
+                    accessToken: user.accessToken,
+                };
+                sessionStorage.setItem("user", JSON.stringify(userdetail));
+                navigate("/")
 
             })
             .catch((error) => {
                 console.error(`login error`, error.code);
-
                 if (error.code === "auth/user-not-found") {
                     setIsEmailError(true);
                     setVisible(true);
                 }
 
-                if (error.code === "auth/wrong-password") {
+                else if (error.code === "auth/wrong-password") {
                     setIsPasswordError(true);
                     setVisible1(true);
                 }
 
-
+                else {
+                    alert(error.code)
+                }
             });
     }
 
