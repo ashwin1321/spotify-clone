@@ -64,6 +64,7 @@ const Home = () => {
                     ))}
                 </div>
             </Container>
+
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
                     <h2 className="fw-bold fs-3  mt-4">Spotify's Playlists</h2>
@@ -85,6 +86,33 @@ const Home = () => {
                             imgSrc={album.coverImage}
                             title={album.albumName}
                             subtitle={album.artists}
+                        />
+                    ))}
+                </div>
+            </Container>
+
+            <Container fluid className="p-0 my-4">
+                <div className="d-flex justify-content-between align-items-end">
+                    <h2 className="fw-bold fs-3  mt-3">Focus</h2>
+                    <a
+                        href="#"
+                        className="text-decoration-none text-white fw-bold"
+                        style={{
+                            fontSize: "0.8rem",
+                        }}
+                    >
+                        SHOW ALL
+                    </a>
+                </div>
+                <div className="mt-3 cards gap-4 px-1">
+                    {albumList.slice(0, 6).map((album, i) => (
+                        <SongCard
+                            key={i}
+                            id={i}
+                            imgSrc={album.coverImage}
+                            title={album.albumName}
+                            subtitle={album.artists}
+
                         />
                     ))}
                 </div>
