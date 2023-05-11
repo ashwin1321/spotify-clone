@@ -14,7 +14,7 @@ const Home = () => {
         <div className="homePage px-4">
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3 ms-5 mt-3">Focus</h2>
+                    <h2 className="fw-bold fs-3  mt-3">Focus</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"
@@ -25,8 +25,8 @@ const Home = () => {
                         SHOW ALL
                     </a>
                 </div>
-                <Row className="mt-3 gap-5 px-1">
-                    {Array(5)
+                <div className="mt-3 cards gap-5 px-1">
+                    {Array(6)
                         .fill(0)
                         .map((_, i) => (
                             <SongCard
@@ -37,11 +37,11 @@ const Home = () => {
                                 subtitle={"Relax and indulge with beautiful piano pieces"}
                             />
                         ))}
-                </Row>
+                </div>
             </Container>
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3 ms-5 mt-4">Spotify's Playlists</h2>
+                    <h2 className="fw-bold fs-3  mt-4">Spotify's Playlists</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"
@@ -52,8 +52,8 @@ const Home = () => {
                         SHOW ALL
                     </a>
                 </div>
-                <Row className="mt-3 gap-5 px-1">
-                    {Array(5)
+                <div className="mt-3 cards gap-5 px-1">
+                    {Array(6)
                         .fill(0)
                         .map((_, i) => (
                             <SongCard
@@ -64,7 +64,7 @@ const Home = () => {
                                 subtitle={"Kick back to the best new and recent chill tunes."}
                             />
                         ))}
-                </Row>
+                </div>
             </Container>
         </div>
     );

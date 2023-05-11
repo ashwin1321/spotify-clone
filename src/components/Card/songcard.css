@@ -40,3 +40,8 @@
   scale: 1;
   opacity: 0.8;
 }
+
+.cardd {
+  display: flex;
+  flex-direction: row;
+}
