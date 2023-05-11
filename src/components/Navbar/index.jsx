@@ -13,7 +13,6 @@ function ColorSchemesExample() {
     const navigate = useNavigate();
     const page = useMatch('/search/*');
     const [search, setSearch] = useState('');
-
     const loggedIn = useRecoilValue(user);
 
     const handleSearch = (e) => {
@@ -23,7 +22,7 @@ function ColorSchemesExample() {
 
     return (
         <>
-            <Navbar variant="dark" className='navbar d-flex justify-content-between p-3 ' sticky='top'>
+            <Navbar className='navbar d-flex justify-content-between p-3 rounded-3' sticky='top'>
                 {!page ?
                     <div className='d-flex h3 arrows gap-4 text-secondary  '>
                         <div className='arrow' onClick={() => navigate(-1)}>
@@ -53,6 +52,7 @@ function ColorSchemesExample() {
                 }
             </Navbar >
         </>
+
     );
 }
 

@@ -33,7 +33,7 @@ const Avatar = () => {
             <Button variant="outline-light" className="btn11"> <FiDownload className="mb-1 me-1" /> Install App</Button>
 
             <Dropdown isOpen={isOpen} toggle={() => setIsOpen((p) => !p)}>
-                <DropdownToggle className=" rounded-5 d-flex w-75 border-0 bg-black justify-content-center ">
+                <DropdownToggle className=" rounded-5 d-flex w-75 border-0 bg-black justify-content-center avt ">
                     <Image src={avatar} width={30} height={30} className="rounded-5 avatar" />
                 </DropdownToggle>
                 <DropdownMenu dark={true} >

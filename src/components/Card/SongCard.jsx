@@ -2,7 +2,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { Button, Card, CardBody, CardText, Col } from "reactstrap";
 import "./songcard.css"
 
-const PlaylistCard = ({ id, imgSrc, title, subtitle }) => {
+const SongCard = ({ id, imgSrc, title, subtitle }) => {
     return (
         <div className="col-md-2 p-0 w-100">
             <Card className="cardComp border-0 rounded-3 p-3">
@@ -22,4 +22,4 @@ const PlaylistCard = ({ id, imgSrc, title, subtitle }) => {
     );
 };
 
-export default PlaylistCard;
+export default SongCard;

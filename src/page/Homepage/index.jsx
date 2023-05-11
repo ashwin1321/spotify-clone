@@ -2,6 +2,7 @@ import { Container } from "reactstrap";
 import SongCard from "../../components/Card/SongCard";
 import { albums } from "../../assets/data/spotify";
 import './homepage.css'
+import HomeDashboardCard from "../../components/Card/homeDashboad";
 
 const Home = () => {
 
@@ -30,6 +31,27 @@ const Home = () => {
 
     return (
         <div className="homePage px-4">
+
+            <Container fluid className="p-0 my-4 ">
+                <div className="d-flex justify-content-between align-items-end">
+                    <h2 className="fw-bold fs-3 text-white">Good Afternoon</h2>
+                </div>
+
+                <div className="mt-4 cardLog gap-4 ">
+                    {albumList.slice(0, 6).map((album, i) => (
+                        <HomeDashboardCard
+                            key={i}
+                            id={i}
+                            imgSrc={album.coverImage}
+                            title={album.albumName}
+                            subtitle={album.artists}
+                        />
+                    ))}
+                </div>
+
+
+            </Container>
+
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
                     <h2 className="fw-bold fs-3 text-white mt-3">Focus</h2>

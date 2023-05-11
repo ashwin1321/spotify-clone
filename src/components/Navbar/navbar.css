@@ -1,6 +1,15 @@
 .navbar {
   background-color: rgb(8, 8, 8);
 }
+
+.navLogged {
+  background-image: linear-gradient(
+    rgba(145, 14, 79, 0.6) 10%,
+    rgba(109, 14, 62, 0.6) 100%
+  ) !important;
+  color: white;
+}
+
 .buttons {
   display: flex;
   gap: 10px;
@@ -8,6 +17,7 @@
 
 .arrows {
   cursor: pointer;
+  margin-left: 50px;
 }
 
 .arrow:hover {
