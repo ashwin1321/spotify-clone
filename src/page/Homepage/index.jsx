@@ -40,7 +40,7 @@ const Home = () => {
         <div className="homePage px-4">
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3  mt-3">Focus</h2>
+                    <h2 className="fw-bold fs-3 text-white mt-3">Focus</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"
@@ -48,11 +48,11 @@ const Home = () => {
                             fontSize: "0.8rem",
                         }}
                     >
-                        SHOW ALL
+                        Show all
                     </a>
                 </div>
                 <div className="mt-3 cards gap-4 px-1">
-                    {shuffledAlbumList.slice(0, 6).map((album, i) => (
+                    {shuffledAlbumList.slice(0, 7).map((album, i) => (
                         <SongCard
                             key={i}
                             id={i}
@@ -67,7 +67,7 @@ const Home = () => {
 
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3  mt-4">Spotify's Playlists</h2>
+                    <h2 className="fw-bold fs-3 text-white mt-4">Spotify's Playlists</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"
@@ -75,11 +75,11 @@ const Home = () => {
                             fontSize: "0.8rem",
                         }}
                     >
-                        SHOW ALL
+                        Show all
                     </a>
                 </div>
                 <div className="mt-3 cards gap-5 px-1">
-                    {shuffledAlbumList.slice(0, 6).reverse().map((album, i) => (
+                    {shuffledAlbumList.slice(0, 7).reverse().map((album, i) => (
                         <SongCard
                             key={i}
                             id={i}
@@ -93,7 +93,7 @@ const Home = () => {
 
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3  mt-3">Focus</h2>
+                    <h2 className="fw-bold fs-3 text-white mt-3">Focus</h2>
                     <a
                         href="#"
                         className="text-decoration-none text-white fw-bold"
@@ -101,11 +101,11 @@ const Home = () => {
                             fontSize: "0.8rem",
                         }}
                     >
-                        SHOW ALL
+                        Show all
                     </a>
                 </div>
                 <div className="mt-3 cards gap-4 px-1">
-                    {albumList.slice(0, 6).map((album, i) => (
+                    {albumList.slice(0, 7).map((album, i) => (
                         <SongCard
                             key={i}
                             id={i}

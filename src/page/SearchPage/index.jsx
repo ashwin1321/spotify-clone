@@ -50,29 +50,22 @@ const SearchPage = () => {
         <div className="homePage px-4">
             <Container fluid className="p-0 my-4">
                 <div className="d-flex justify-content-between align-items-end">
-                    <h2 className="fw-bold fs-3  mt-4">Albums</h2>
-                    <a
-                        href="#"
-                        className="text-decoration-none text-white fw-bold"
-                        style={{
-                            fontSize: "0.8rem",
-                        }}
-                    >
-                        SHOW ALL
-                    </a>
+                    <h2 className="fw-bold fs-4 text-white mt-4">Browse all</h2>
+
                 </div>
                 <div className="mt-3 cards gap-5 px-1">
 
-                    {shuffledAlbumList.map((album, i) => (
-                        <SongCard
-                            key={i}
-                            id={i}
-                            imgSrc={album.coverImage}
-                            title={album.albumName}
-                            subtitle={album.artists}
-                        />
+                    {Array.from({ length: 3 }, () => (
+                        shuffledAlbumList.map((album, index) => (
+                            <SongCard
+                                key={index}
+                                id={index}
+                                imgSrc={album.coverImage}
+                                title={album.albumName}
+                                subtitle={album.artists}
+                            />
+                        ))
                     ))}
-
                     {/* {songsList.map((song, i) => (
                         <SongCard
 
@@ -84,15 +77,7 @@ const SearchPage = () => {
                         />
                     ))} */}
 
-                    {shuffledAlbumList.map((album, i) => (
-                        <SongCard
-                            key={i}
-                            id={i}
-                            imgSrc={album.coverImage}
-                            title={album.albumName}
-                            subtitle={album.artists}
-                        />
-                    ))}
+
                 </div>
             </Container>
         </div>

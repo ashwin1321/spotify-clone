@@ -5,7 +5,7 @@ import "./songcard.css"
 const PlaylistCard = ({ id, imgSrc, title, subtitle }) => {
     return (
         <div className="col-md-2 p-0 w-100">
-            <Card className="cardComp border-0 rounded-3 p-4">
+            <Card className="cardComp border-0 rounded-3 p-3">
                 <div className="position-relative">
                     <img src={imgSrc} alt="..." className="w-100 rounded-3 shadow" />
                     <Button className="playButton rounded-circle border-0 d-flex justify-content-center align-items-center p-2  shadow">
