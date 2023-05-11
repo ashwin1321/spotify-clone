@@ -9,7 +9,7 @@ import Avatar from '../Card/Avatar';
 import { useRecoilValue } from 'recoil';
 import { user } from '../../recoil/recoilState'
 
-function ColorSchemesExample() {
+function Navbars() {
     const navigate = useNavigate();
     const page = useMatch('/search/*');
     const [search, setSearch] = useState('');
@@ -56,4 +56,4 @@ function ColorSchemesExample() {
     );
 }
 
-export default ColorSchemesExample;
+export default Navbars;
