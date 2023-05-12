@@ -5,7 +5,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap'
 const index = () => {
     return (
         <Container fluid className=" mt-2  ">
-            <div>
+            <Row className='ms-0 w-75'>
                 <div className='serbutton'>
                     <Button className="sbtn ">All</Button>
                     <Button className="sbtn" >Songs</Button>
@@ -16,7 +16,7 @@ const index = () => {
                     <Button className="sbtn" >Genres & Moods</Button>
                     <Button className="sbtn" >Profiles</Button>
                 </div>
-            </div>
+            </Row>
 
         </Container>
 

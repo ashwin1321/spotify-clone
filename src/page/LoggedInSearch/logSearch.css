@@ -12,6 +12,7 @@
 }
 
 .serbutton {
+  margin-left: -10px !important;
   display: flex !important;
   gap: 7px !important;
 }
