@@ -5,3 +5,9 @@
 #activee:hover {
   color: red !important;
 }
+
+.slogo {
+  width: 45px;
+  height: 45px !important;
+  filter: blur(0.5px);
+}

@@ -5,6 +5,7 @@ import { BsShuffle, BsList } from 'react-icons/bs'
 import { TbMicrophone2 } from 'react-icons/tb'
 import { MdOutlineComputer } from 'react-icons/md'
 import { GiSpeaker } from 'react-icons/gi'
+import { RiRepeatLine } from 'react-icons/ri'
 
 import './playCard.css'
 
@@ -15,10 +16,10 @@ function ColorSchemesExample() {
             <Navbar className=' playsong d-flex justify-content-between playy rounded-3' sticky='bottom'>
                 <Col className='d-flex justify-content-between'>
                     <div className='d-flex align-items-center'>
-                        <img src='https://images.unsplash.com/photo-1586095087956-bc66fe634955?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&h=70&q=80' alt='song' className='img-fluid rounded-3 ' />
+                        <img src='https://i.scdn.co/image/ab67616d0000485108596cc28b9f5b00bfe08ae7' alt='song' className='img-fluid rounded-3 ' />
                         <div className='ms-3 '>
-                            <h6 className='text-white m-0 fs-6'>Hotline Bling</h6>
-                            <p className='text-secondary fs-6 mb-1 icon'>Drake</p>
+                            <h6 className='text-white m-0 fs-6'>Glimpse of Us</h6>
+                            <p className='text-secondary fs-6 mb-1 icon'>Joji</p>
                         </div>
 
                         <div className='d-flex ms-4 gap-3 align-items-center'>
@@ -34,7 +35,7 @@ function ColorSchemesExample() {
                         <AiFillStepBackward size={25} className='icon' />
                         <AiFillPlayCircle size={40} className='text-white play' />
                         <AiFillStepForward size={25} className='icon' />
-                        <AiOutlineRedo size={25} className='icon' />
+                        <RiRepeatLine size={23} className='icon' color='green' />
                     </div>
 
                     <div className='d-flex gap-2 align-items-center'>

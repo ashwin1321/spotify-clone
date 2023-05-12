@@ -11,7 +11,6 @@ import './sidebar.css'
 const index = () => {
 
     const location = useLocation();
-    console.log(location.pathname)
 
     const icons1 = [{
         title: 'Home',
@@ -47,8 +46,8 @@ const index = () => {
 
             {/* logo */}
             <div className=' d-flex gap-2 ' >
-                <Image src={logo} fluid width={50} />
-                <h3 className='mt-2 text-white '>Spotify</h3>
+                <Image src={logo} fluid className='slogo' />
+                <h3 className='mt-2 text-white fs-4'>Spotify</h3>
             </div>
 
             {/* menu */}

@@ -74,14 +74,14 @@ const loginForm = () => {
 
     return (
         <Container className=" login  ">
-            <Container className="mt-5">
+            <Container className="">
                 <Container className="d-flex flex-column align-items-center gap-3">
                     <div className=" d-flex gap-3 ">
-                        <Image src={logo} fluid width={50} />
-                        <h3 className="mt-2 text-white ">Spotify</h3>
+                        <Image src={logo} fluid className="slogo" />
+                        <h3 className="mt-2 fs-4 text-white ">Spotify</h3>
                     </div>
                     <hr className=" hr1" />
-                    <h6 className="text-center mt-3">To continue, log in to Spotify.</h6>
+                    <h6 className="text-center ">To continue, log in to Spotify.</h6>
 
                     <Button className=" d-flex justify-content-between rounded-5 px-5 btn  text-light fb" >
                         <BsFacebook className=" mt-1" />

@@ -64,7 +64,7 @@ const signinForm = () => {
 
     return (
         <Container className=" login  ">
-            <Container className="mt-5 mb-3">
+            <Container className=" mb-3">
                 <Container className="d-flex flex-column align-items-center gap-3">
                     <div className=" d-flex gap-3 ">
                         <Image src={logo} fluid width={50} />
