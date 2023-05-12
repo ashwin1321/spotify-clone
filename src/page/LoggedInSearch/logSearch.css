@@ -32,11 +32,27 @@
   transition: all 0.3s ease-in-out;
 }
 
+.imgg2 {
+  width: 9rem !important;
+  height: 9rem !important;
+  object-fit: cover !important;
+  transition: all 0.3s ease-in-out;
+}
+
 .cardssss {
   width: 22vw !important;
   background: rgb(24, 24, 24) !important;
   cursor: pointer;
-  height: 25vh !important;
+  padding: 30px !important;
+}
+
+.cardsssa {
+  width: 10.5vw !important;
+  background: rgb(24, 24, 24) !important;
+  cursor: pointer;
+  height: 28vh !important;
+  justify-content: center;
+  align-items: center;
   padding: 30px !important;
 }
 
@@ -48,4 +64,38 @@
 
 .songcol {
   margin-left: -50px !important;
+}
+
+.mbody {
+  width: 9vw !important;
+}
+
+.playButtons {
+  background-color: #1ed661 !important;
+  width: 45px !important;
+  position: absolute;
+  right: 25px;
+  top: 45%;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.2s ease-in-out !important;
+}
+
+.cardComp:hover .playButtons {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.playButtons:hover {
+  scale: 1.1;
+  background-color: #1ce265 !important;
+}
+
+.playButtons:active {
+  scale: 1;
+  opacity: 0.8;
+}
+
+.contd {
+  width: 80vw !important;
 }
