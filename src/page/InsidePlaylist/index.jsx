@@ -5,14 +5,16 @@ import { VscEllipsis } from "react-icons/vsc";
 import { GiHearts } from "react-icons/gi";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { songs } from "../../assets/data/spotify";
+import { Image } from "react-bootstrap";
+import avatar from "../../assets/image/avatar.jpg";
+import { user } from "../../recoil/recoilState"
+import { useRecoilValue } from "recoil";
 import "./indise.css"
 
 const InsidePlaylist = () => {
     const location = useLocation();
     const { album } = location.state;
-    console.log(album)
-
-    console.log(album)
+    const loggedIn = useRecoilValue(user);
 
     const songsList = songs.song.map(song => {
         const title = song.title;
@@ -57,9 +59,12 @@ const InsidePlaylist = () => {
                             {album.albumName}
                         </span>
                         <span>{album.releaseDate}</span>
-                        <div className="d-flex align-items-center">
+                        <div className="d-flex align-items-center mt-1">
                             {album.artists && (
-                                <span className="me-1 fw-semibold">{album.artists}</span>
+                                <>
+                                    {loggedIn && <Image src={avatar} width={25} height={25} className="rounded-5 avatar me-2" />}
+                                    <span className="me-1 fw-semibold">{album.artists}</span>
+                                </>
                             )}
                             {!album.artists && (
                                 <div className=" d-flex align-items-center ">
@@ -70,10 +75,9 @@ const InsidePlaylist = () => {
                             <span>•</span>
                             <span className="mx-1">
                                 {shuffleSongsList.length}{" "}
-                                {shuffleSongsList > 1 ? " songs" : " song"}{" "}
+                                {shuffleSongsList > 1 ? " songs" : " song"}{", "}
                             </span>
-                            <span>•</span>
-                            <span className="ms-1 text-secondary"> &emsp;7 hr 35 min</span>
+                            <span className="ms-1 text-secondary">about 8 hr</span>
                         </div>
                     </Col>
                 </Row>
