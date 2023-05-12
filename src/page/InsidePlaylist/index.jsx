@@ -10,6 +10,7 @@ import "./indise.css"
 const InsidePlaylist = () => {
     const location = useLocation();
     const { album } = location.state;
+    console.log(album)
 
     console.log(album)
 

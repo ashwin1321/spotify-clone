@@ -5,7 +5,6 @@ import './homepage.css'
 import HomeDashboardCard from "../../components/Card/homeDashboad";
 import { user } from "../../recoil/recoilState"
 import { useRecoilValue } from "recoil";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -129,13 +128,15 @@ const renderdefaultHome = (sectionTitle, albums) => {
 
             <div className="mt-3 cards gap-4 px-1 ">
                 {albums.map((album, i) => (
-                    <SongCard
-                        key={i}
-                        id={i}
-                        imgSrc={album.coverImage}
-                        title={album.albumName}
-                        subtitle={album.artists}
-                    />
+                    <Link key={i} to={`/album/${album.albumName}`} className="text-decoration-none" state={{ album }}>
+                        <SongCard
+                            key={i}
+                            id={i}
+                            imgSrc={album.coverImage}
+                            title={album.albumName}
+                            subtitle={album.artists}
+                        />
+                    </Link>
                 ))}
             </div>
         </Container>
@@ -169,83 +170,3 @@ const renderAfterLogin = (sectionTitle, songs) => (
         </div>
     </div>
 );
-
-{/* <Container fluid className="p-0 my-4">
-<div className="d-flex justify-content-between align-items-end">
-    <h2 className="fw-bold fs-3 text-white mt-3">Focus</h2>
-    <a
-        href="#"
-        className="text-decoration-none text-white fw-bold"
-        style={{
-            fontSize: "0.8rem",
-        }}
-    >
-        Show all
-    </a>
-</div>
-<div className="mt-3 cards gap-4 px-1">
-    {shuffledAlbumList.slice(0, 7).map((album, i) => (
-        <SongCard
-            key={i}
-            id={i}
-            imgSrc={album.coverImage}
-            title={album.albumName}
-            subtitle={album.artists}
-
-        />
-    ))}
-</div>
-</Container>
-
-<Container fluid className="p-0 my-4">
-<div className="d-flex justify-content-between align-items-end">
-    <h2 className="fw-bold fs-3 text-white mt-4">Spotify's Playlists</h2>
-    <a
-        href="#"
-        className="text-decoration-none text-white fw-bold"
-        style={{
-            fontSize: "0.8rem",
-        }}
-    >
-        Show all
-    </a>
-</div>
-<div className="mt-3 cards gap-5 px-1">
-    {shuffledAlbumList.slice(0, 7).reverse().map((album, i) => (
-        <SongCard
-            key={i}
-            id={i}
-            imgSrc={album.coverImage}
-            title={album.albumName}
-            subtitle={album.artists}
-        />
-    ))}
-</div>
-</Container>
-
-<Container fluid className="p-0 my-4">
-<div className="d-flex justify-content-between align-items-end">
-    <h2 className="fw-bold fs-3 text-white mt-3">Focus</h2>
-    <a
-        href="#"
-        className="text-decoration-none text-white fw-bold"
-        style={{
-            fontSize: "0.8rem",
-        }}
-    >
-        Show all
-    </a>
-</div>
-<div className="mt-3 cards gap-4 px-1">
-    {albumList.slice(0, 7).map((album, i) => (
-        <SongCard
-            key={i}
-            id={i}
-            imgSrc={album.coverImage}
-            title={album.albumName}
-            subtitle={album.artists}
-
-        />
-    ))}
-</div>
-</Container> */}
