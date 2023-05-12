@@ -12,6 +12,7 @@ import ErrorPage from './page/ErrorPage.jsx';
 import SearchPage from './page/SearchPage';
 import { RecoilRoot } from 'recoil';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
+import InsidePlaylist from './page/InsidePlaylist/index.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: '/', element: <HomePage /> },
       { path: '/search', element: <SearchPage /> },
       { path: '/search/:id', element: <SearchPage /> },
+      { path: '/album/:id', element: <InsidePlaylist /> }
 
     ]
 
