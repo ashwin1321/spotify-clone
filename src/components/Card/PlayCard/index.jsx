@@ -1,6 +1,7 @@
-import { Col, Navbar } from 'reactstrap';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { Col, Navbar, Progress } from 'reactstrap';
+import { AiOutlineHeart, AiFillStepBackward, AiFillStepForward, AiFillPlayCircle, AiOutlineRedo } from 'react-icons/ai';
 import { MdOutlinePictureInPictureAlt } from 'react-icons/md';
+import { BsShuffle } from 'react-icons/bs'
 import './playCard.css'
 
 function ColorSchemesExample() {
@@ -21,25 +22,29 @@ function ColorSchemesExample() {
                             <MdOutlinePictureInPictureAlt size={20} className='icon' />
                         </div>
                     </div>
-
-
                 </Col>
 
-                <Col className='d-flex justify-content-between'>
-                    <div className='d-flex align-items-center'>
-                        <i className='fas fa-random me-3 text-white'></i>
-                        <i className='fas fa-step-backward me-3 text-white'></i>
-                        <i className='fas fa-pause-circle me-3 text-white'></i>
-                        <i className='fas fa-step-forward me-3 text-white'></i>
-                        <i className='fas fa-redo-alt me-3 text-white'></i>
+                <Col className='d-flex flex-column align-items-center justify-content-between gap-1 '>
+                    <div className='d-flex align-items-center gap-3 '>
+                        <BsShuffle size={23} className='icon' color='green' />
+                        <AiFillStepBackward size={25} className='icon' />
+                        <AiFillPlayCircle size={40} className='text-white play' />
+                        <AiFillStepForward size={25} className='icon' />
+                        <AiOutlineRedo size={25} className='icon' />
                     </div>
-                    <div className='d-flex align-items-center'>
-                        <i className='fas fa-volume-up me-3 text-white'></i>
-                        <div className='progress w-50'>
-                            <div className='progress-bar bg-white' role='progressbar' style={{ width: '25%' }} aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>
-                        </div>
+
+                    <div className='d-flex gap-2 align-items-center'>
+
+                        <p className='text-white m-0 para'>0:00</p>
+
+                        <Progress color="success" className='progress prog bg-secondary ' />
+
+                        <p className='text-white m-0 para'>3:57</p>
                     </div>
-                    f
+
+
+
+
                 </Col>
 
                 <Col className='d-flex justify-content-between'>

@@ -1,3 +1,21 @@
 .icon:hover {
   color: #ffffff;
 }
+
+.play:hover {
+  transform: scale(1.1);
+}
+
+.prog {
+  width: 30vw;
+  height: 5px !important;
+}
+
+.para {
+  font-size: 0.9rem;
+}
+
+.prog:hover {
+  cursor: pointer !important;
+  background-color: rgb(42, 133, 42) !important;
+}
