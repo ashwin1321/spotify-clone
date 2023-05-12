@@ -13,6 +13,7 @@ import SearchPage from './page/SearchPage';
 import { RecoilRoot } from 'recoil';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import InsidePlaylist from './page/InsidePlaylist/index.jsx';
+import LoggedInSearch from './page/LoggedInSearch/';
 
 
 const router = createBrowserRouter([
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       { path: '/', element: <HomePage /> },
       { path: '/search', element: <SearchPage /> },
-      { path: '/search/:id', element: <SearchPage /> },
+      { path: '/search/:id', element: <LoggedInSearch /> },
       { path: '/album/:id', element: <InsidePlaylist /> }
 
     ]

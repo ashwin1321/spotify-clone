@@ -1,0 +1,22 @@
+.sbtn {
+  border: none !important;
+  border-radius: 50px !important;
+  width: auto !important;
+  text-align: center;
+  background: #202020 !important;
+}
+
+.sbtn:hover {
+  background-color: #ebe8e8 !important;
+  color: black !important;
+}
+
+.serbutton {
+  display: flex !important;
+  gap: 7px !important;
+}
+
+.serbutton :first-child {
+  background-color: #ebe8e8 !important;
+  color: black !important;
+}
