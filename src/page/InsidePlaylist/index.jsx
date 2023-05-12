@@ -58,7 +58,7 @@ const InsidePlaylist = () => {
                         <span className="m-0 p-0 fw-bold" style={{ fontSize: "70px" }}>
                             {album.albumName}
                         </span>
-                        <span>{album.releaseDate}</span>
+                        <span className="mb-2">Release Date : &nbsp; {album.releaseDate}</span>
                         <div className="d-flex align-items-center mt-1">
                             {album.artists && (
                                 <>
