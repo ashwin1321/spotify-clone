@@ -45,3 +45,7 @@
   width: auto !important;
   background-color: black;
 }
+
+.songcol {
+  margin-left: -50px !important;
+}

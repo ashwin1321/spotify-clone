@@ -4,8 +4,38 @@ import { Button } from 'react-bootstrap'
 import { Container, Row, Col, Card, CardBody, CardText } from 'reactstrap'
 import SearchPage from '../SearchPage'
 import { BsFillPlayFill } from "react-icons/bs";
+import { songs } from '../../assets/data/spotify'
 
 const index = () => {
+
+
+    function shuffleArray(array) {
+        const shuffledArray = [...array]; // Make a copy of the original array
+
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+
+        return shuffledArray;
+    }
+
+    const songsList = songs.song.map(song => {
+        const title = song.title;
+        const artist = song.artist;
+        const album = song.album;
+        const duration = song.duration;
+
+        const fileName = song.image.fileName;
+        const format = song.image.format;
+        const imageData = song.image.data;
+        const imgTags = `data:${format};base64,${imageData}`;
+
+        return { title, artist, album, duration, fileName, format, imgTags };
+    });
+
+    const shuffleSongsList = shuffleArray(songsList);
+
     return (
         <>
             <Container fluid className=" mt-2 cont ">
@@ -43,14 +73,34 @@ const index = () => {
                                 </Button>
                             </Card>
                         </div>
-
-
                     </Col>
-                    <Col className='col-8'>
+
+                    <Col className='col-8 songcol'>
 
                         <div className="d-flex justify-content-between align-items-end">
                             <h2 className="fw-bold fs-4 text-white">Songs</h2>
                         </div>
+
+                        {shuffleSongsList.slice(0, 4).map((song, i) => (
+
+                            <div key={i} className='m-0 ms-0 mt-2 d-flex table-roww p-2 align-items-center' >
+                                <div className="col-9">
+                                    <div className="d-flex ">
+                                        <img
+                                            src={song.imgTags}
+                                            style={{ width: "40px", height: "40px" }}
+                                            className="me-3"
+                                        />
+                                        <div className="d-flex flex-column">
+                                            <span className="text-white fw-bold songt">{song.title}</span>
+                                            <span className="songt">{song.artist}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-3 fs-6 text-center">3:57</div>
+                            </div>
+                        ))}
+
                     </Col>
                 </Row>
 
