@@ -22,7 +22,7 @@ function Navbars() {
 
     return (
         <>
-            <Navbar className='navbar d-flex justify-content-between p-3 rounded-3' sticky='top'>
+            <Navbar className='navbar d-flex justify-content-between p-3 rounded-1' sticky='top'>
                 {!page ?
                     <div className='d-flex h3 arrows gap-4 text-secondary  '>
                         <div className='arrow' onClick={() => navigate(-1)}>
@@ -35,7 +35,7 @@ function Navbars() {
                     : null}
 
                 {page ? <div className='d-flex justify-content-center'>
-                    <Input type="search" placeholder="What do you want to listen to?" className='search text-white bg-dark search' value={search}
+                    <Input type="search" placeholder="What do you want to listen to?" className='search text-white search' value={search}
                         onChange={handleSearch} />
                 </div> : null}
 

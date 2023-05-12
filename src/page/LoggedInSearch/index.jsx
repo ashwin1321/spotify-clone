@@ -30,7 +30,7 @@ const index = () => {
                         </div>
 
                         <div className=" p-0 border-5  mt-2">
-                            <Card className="cardComp cardsss border-0 rounded-3 gap-3  ">
+                            <Card className="cardComp cardssss border-0 rounded-3 gap-3  ">
                                 <div className="position-relative  ">
                                     <img src={`https://i.scdn.co/image/ab67616100005174d42a27db3286b58553da8858`} alt="..." className=" imgg1 rounded-circle" />
                                 </div>
