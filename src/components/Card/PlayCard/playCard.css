@@ -8,7 +8,7 @@
 
 .prog {
   width: 30vw;
-  height: 5px !important;
+  height: 4px !important;
 }
 
 .para {
@@ -18,4 +18,13 @@
 .prog:hover {
   cursor: pointer !important;
   background-color: rgb(42, 133, 42) !important;
+}
+
+.progs {
+  width: 5vw;
+  height: 4px !important;
+}
+
+.playy {
+  opacity: 0.96;
 }

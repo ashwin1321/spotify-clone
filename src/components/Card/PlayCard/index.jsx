@@ -1,14 +1,18 @@
 import { Col, Navbar, Progress } from 'reactstrap';
 import { AiOutlineHeart, AiFillStepBackward, AiFillStepForward, AiFillPlayCircle, AiOutlineRedo } from 'react-icons/ai';
 import { MdOutlinePictureInPictureAlt } from 'react-icons/md';
-import { BsShuffle } from 'react-icons/bs'
+import { BsShuffle, BsList } from 'react-icons/bs'
+import { TbMicrophone2 } from 'react-icons/tb'
+import { MdOutlineComputer } from 'react-icons/md'
+import { GiSpeaker } from 'react-icons/gi'
+
 import './playCard.css'
 
 function ColorSchemesExample() {
 
     return (
         <>
-            <Navbar className=' playsong d-flex justify-content-between bg-dark rounded-3' sticky='bottom'>
+            <Navbar className=' playsong d-flex justify-content-between playy rounded-3' sticky='bottom'>
                 <Col className='d-flex justify-content-between'>
                     <div className='d-flex align-items-center'>
                         <img src='https://images.unsplash.com/photo-1586095087956-bc66fe634955?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=60&h=70&q=80' alt='song' className='img-fluid rounded-3 ' />
@@ -47,17 +51,15 @@ function ColorSchemesExample() {
 
                 </Col>
 
-                <Col className='d-flex justify-content-between'>
-                    <div className='d-flex align-items-center'>
-                        <i className='fas fa-list-ul me-3 text-white'></i>
-                        <i className='fas fa-desktop me-3 text-white'></i>
-                        <i className='fas fa-volume-up me-3 text-white'></i>
+                <Col className='d-flex '>
+                    <div className='d-flex ms-auto me-2 align-items-center gap-2'>
+                        <TbMicrophone2 size={20} className='icon' />
+                        <BsList size={20} className='icon' />
+                        <MdOutlineComputer size={20} className='icon' />
+                        <GiSpeaker size={20} className='icon' />
+                        <Progress color="success" className=' progs ' />
                     </div>
-                    <div className='d-flex align-items-center'>
-                        <i className='fas fa-list-ul me-3 text-white'></i>
-                        <i className='fas fa-desktop me-3 text-white'></i>
-                        <i className='fas fa-volume-up me-3 text-white'></i>
-                    </div>\s
+
                 </Col>
 
 
