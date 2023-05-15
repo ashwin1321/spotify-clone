@@ -20,10 +20,28 @@
   cursor: pointer;
 }
 
+.table-roww .titleLogo,
+.table-roww .heartIcon {
+  display: none;
+}
+
+.table-roww .timee {
+  justify-content: end !important;
+}
+
 .table-roww:hover {
   background: rgb(24, 24, 24) !important;
   border-radius: 5px !important;
   color: rgb(231, 229, 229);
+}
+
+.table-roww:hover .titleNum {
+  display: none;
+}
+
+.table-roww:hover .titleLogo,
+.table-roww:hover .heartIcon {
+  display: block;
 }
 
 .songt:hover {
@@ -32,4 +50,8 @@
 
 .col1 {
   width: 30px !important;
+}
+
+.heartIcon {
+  margin-right: 30px !important;
 }

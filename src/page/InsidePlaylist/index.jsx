@@ -3,13 +3,14 @@ import { useLocation } from "react-router-dom";
 import { Button, Col, Container, Row } from "reactstrap";
 import { VscEllipsis } from "react-icons/vsc";
 import { GiHearts } from "react-icons/gi";
-import { AiOutlineClockCircle } from "react-icons/ai";
+import { AiOutlineClockCircle, AiOutlineHeart } from "react-icons/ai";
 import { Image } from "react-bootstrap";
 import avatar from "../../assets/image/avatar.jpg";
 import { user } from "../../recoil/recoilState"
 import { useRecoilValue } from "recoil";
 import { shuffleArray, songsList } from "../../utils/songsAndAlbums";
 import "./indise.css"
+import { FaPlay } from "react-icons/fa"
 
 const InsidePlaylist = () => {
     const location = useLocation();
@@ -81,7 +82,8 @@ const InsidePlaylist = () => {
                         {shuffleSongsList.map((song, index) => {
                             return (
                                 <div key={index} className="d-flex align-items-center table-roww p-2">
-                                    <div className="col-1 col1">{index + 1}</div>
+                                    <div className="col-1 col1 titleNum">{index + 1}</div>
+                                    <div className="col-1 col1 titleLogo"> <FaPlay size={14} color="white" /></div>
                                     <div className="col-4">
                                         <div className="d-flex ">
                                             <img
@@ -95,9 +97,14 @@ const InsidePlaylist = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-5 songt">{song.artist}</div>
+                                    <div className="col-5 songt d-flex justify-content-between">
+                                        <div>{song.artist}</div>
+                                    </div>
                                     <div className="col-1">2023-03-15</div>
-                                    <div className="col-1 text-end">3:57</div>
+                                    <div className="col-1 d-flex justify-content-between timee">
+                                        <div className="heartIcon"><AiOutlineHeart size={22} /></div>
+                                        <div>3:57</div>
+                                    </div>
                                 </div>
                             );
                         })}
