@@ -5,7 +5,7 @@ import { BiLibrary } from 'react-icons/bi'
 import { BsPlusSquare } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
 import ListSidebar from '../listSidebar';
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import './sidebar.css'
 
 const index = () => {
