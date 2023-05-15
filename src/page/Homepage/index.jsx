@@ -1,4 +1,4 @@
-import { Container } from "reactstrap";;
+import { Container } from "reactstrap";
 import './homepage.css'
 import HomeDashboardCard from "../../components/Card/homeDashboad";
 import { user } from "../../recoil/recoilState"
