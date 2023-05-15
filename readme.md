@@ -25,8 +25,8 @@ yarn
 yarn dev
 ```
 
-- OR
-``` go to 
+- Or, go to 
+```bash
 https://ashwinspotifyclone.onrender.com/
 ```
 
