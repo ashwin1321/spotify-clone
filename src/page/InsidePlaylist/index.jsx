@@ -74,9 +74,12 @@ const InsidePlaylist = () => {
                             <div className=" col-1 col1 ">#</div>
                             <div className="col-4">Title</div>
                             <div className="col-5">Artist</div>
-                            <div className="col-1">Date added</div>
-                            <div className="col-1 text-end pe-3 mb-1">
-                                <AiOutlineClockCircle size={20} />
+                            <div className="col-2 d-flex justify-content-between datee">
+
+                                <div>Date added</div>
+                                <div className="col-1 text-end pe-3 mb-1">
+                                    <AiOutlineClockCircle size={20} />
+                                </div>
                             </div>
                         </div>
                         {shuffleSongsList.map((song, index) => {
@@ -100,10 +103,13 @@ const InsidePlaylist = () => {
                                     <div className="col-5 songt d-flex justify-content-between">
                                         <div>{song.artist}</div>
                                     </div>
-                                    <div className="col-1">2023-03-15</div>
-                                    <div className="col-1 d-flex justify-content-between timee">
-                                        <div className="heartIcon"><AiOutlineHeart size={22} /></div>
-                                        <div>3:57</div>
+
+                                    <div className="col-2 d-flex justify-content-between datee">
+                                        <div className="">2023-03-15</div>
+                                        <div className=" d-flex justify-content-between timee">
+                                            <div className="heartIcon"><AiOutlineHeart size={22} /></div>
+                                            <div>3:57</div>
+                                        </div>
                                     </div>
                                 </div>
                             );
