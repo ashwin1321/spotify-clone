@@ -3,6 +3,7 @@
 - Spotify clone using reactJS
 - Static data is used to display cards
 - But, signup and login are functional unlike other feature
+- sign up and login to view UI 
 
 ## Tech Stack
 
