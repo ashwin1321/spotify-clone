@@ -1,12 +1,11 @@
 import { Col, Navbar, Progress } from 'reactstrap';
-import { AiOutlineHeart, AiFillStepBackward, AiFillStepForward, AiFillPlayCircle, AiOutlineRedo } from 'react-icons/ai';
+import { AiOutlineHeart, AiFillStepBackward, AiFillStepForward, AiFillPlayCircle } from 'react-icons/ai';
 import { MdOutlinePictureInPictureAlt } from 'react-icons/md';
 import { BsShuffle, BsList } from 'react-icons/bs'
 import { TbMicrophone2 } from 'react-icons/tb'
 import { MdOutlineComputer } from 'react-icons/md'
 import { GiSpeaker } from 'react-icons/gi'
 import { RiRepeatLine } from 'react-icons/ri'
-
 import './playCard.css'
 
 function ColorSchemesExample() {
