@@ -27,4 +27,4 @@ yarn dev
 
 ## Compatibility
 
-- Compatible for web browsers only. ( Not for mobile devices )
+- Compatible on web browsers only. ( Not for mobile devices )
