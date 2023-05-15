@@ -2,11 +2,9 @@ import React from 'react'
 import "./logSearch.css"
 import { Button } from 'react-bootstrap'
 import { Container, Row, Col, Card, CardBody, CardText } from 'reactstrap'
-import SearchPage from '../SearchPage'
 import { BsFillPlayFill } from "react-icons/bs";
-import { songs } from '../../assets/data/spotify'
-import { Link } from 'react-router-dom'
-import SongCard from '../../components/Card/SongCard'
+import { shuffleArray, songsList } from '../../utils/songsAndAlbums'
+import { renderSongs } from '../../utils/RenderData'
 
 const index = () => {
 
@@ -16,31 +14,6 @@ const index = () => {
         { id: 3, imageUrl: "https://i.scdn.co/image/ab676161000051745a00969a4698c3132a15fbb0", title: "Taylor Swift", subtitle: "Artist" },
         { id: 4, imageUrl: "https://i.scdn.co/image/ab67616100005174cdce7620dc940db079bf4952", title: "Ariana Grande", subtitle: "Artist" },
     ];
-
-    function shuffleArray(array) {
-        const shuffledArray = [...array]; // Make a copy of the original array
-
-        for (let i = shuffledArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-        }
-
-        return shuffledArray;
-    }
-
-    const songsList = songs.song.map(song => {
-        const title = song.title;
-        const artist = song.artist;
-        const album = song.album;
-        const duration = song.duration;
-
-        const fileName = song.image.fileName;
-        const format = song.image.format;
-        const imageData = song.image.data;
-        const imgTags = `data:${format};base64,${imageData}`;
-
-        return { title, artist, album, duration, fileName, format, imgTags };
-    });
 
     const shuffleSongsList = shuffleArray(songsList);
     const shuffleSongsList1 = shuffleArray(songsList);
@@ -118,7 +91,7 @@ const index = () => {
             </Container>
 
             <Container fluid className="p-0 my-2 ms-3 mb-2 contd ">
-                {renderSections("Featuring Dua Lipa", shuffleSongsList.slice(0, 4))}
+                {renderSongs("Featuring Dua Lipa", shuffleSongsList.slice(0, 4))}
             </Container>
 
             <Container fluid className="p-0 my-2 ms-3 contd my-3">
@@ -146,11 +119,11 @@ const index = () => {
             </Container>
 
             <Container fluid className="p-0 my-2  mb-2 contd">
-                {renderSections("Playlists", shuffleSongsList1.slice(0, 7))}
+                {renderSongs("Playlists", shuffleSongsList1.slice(0, 7))}
             </Container>
 
             <Container fluid className="p-0 my-2 mt-3 mb-2 contd ">
-                {renderSections("Podcasts", shuffleSongsList2.slice(0, 7))}
+                {renderSongs("Podcasts", shuffleSongsList2.slice(0, 7))}
             </Container>
         </>
 
@@ -159,27 +132,3 @@ const index = () => {
 }
 
 export default index
-
-
-
-const renderSections = (sectionTitle, songs) => {
-    return (
-
-        <div>
-            <div className="d-flex justify-content-between align-items-end">
-                <h2 className="fw-bold fs-4 text-white mt-3">{sectionTitle}</h2>
-            </div>
-            <div className="mt-3 cards gap-4 px-1">
-                {songs.map((song, i) => (
-                    <SongCard
-                        key={i}
-                        id={i}
-                        imgSrc={song.imgTags}
-                        title={song.title}
-                        subtitle={song.artist}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-};

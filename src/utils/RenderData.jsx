@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SongCard from "../components/Card/SongCard.jsx";
 
 
-export const renderdefaultHome = (sectionTitle, albums) => {
+export const renderAlbums = (sectionTitle, albums) => {
     return (
 
 
@@ -40,7 +40,7 @@ export const renderdefaultHome = (sectionTitle, albums) => {
 
 
 export
-    const renderAfterLogin = (sectionTitle, songs) => (
+    const renderSongs = (sectionTitle, songs) => (
         <div>
             <div className="d-flex justify-content-between align-items-end">
                 <h2 className="fw-bold fs-3 text-white mt-3">{sectionTitle}</h2>

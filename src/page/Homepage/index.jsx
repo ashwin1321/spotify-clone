@@ -1,12 +1,11 @@
-import { Container } from "reactstrap";
-import SongCard from "../../components/Card/SongCard";
+import { Container } from "reactstrap";;
 import './homepage.css'
 import HomeDashboardCard from "../../components/Card/homeDashboad";
 import { user } from "../../recoil/recoilState"
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { shuffleArray, albumList, songsList } from "../../utils/songsAndAlbums";
-import { renderdefaultHome, renderAfterLogin } from "../../utils/RenderData";
+import { renderAlbums, renderSongs } from "../../utils/RenderData";
 
 const Home = () => {
 
@@ -49,24 +48,24 @@ const Home = () => {
                     </Container>
 
                     <Container fluid className="p-0 my-4">
-                        {renderAfterLogin("Made For You", shuffleSongsList1.slice(0, 7))}
+                        {renderSongs("Made For You", shuffleSongsList1.slice(0, 7))}
                     </Container>
 
                     <Container fluid className="p-0 my-3">
-                        {renderAfterLogin("Your Top Mixes", shuffleSongsList.slice(0, 7))}
+                        {renderSongs("Your Top Mixes", shuffleSongsList.slice(0, 7))}
                     </Container>
 
                     <Container fluid className="p-0 my-4">
-                        {renderAfterLogin("Recently Played", shuffleSongsLis2.slice(0, 7))}
+                        {renderSongs("Recently Played", shuffleSongsLis2.slice(0, 7))}
                     </Container>
 
                 </div>
 
                 :
                 (<div className="homePage px-4" >
-                    {renderdefaultHome("Focus", shuffledAlbumList.slice(0, 7))}
-                    {renderdefaultHome("Spotify's Playlists", shuffledAlbumList1.slice(0, 7).reverse())}
-                    {renderdefaultHome("Focus", shuffledAlbumList2.slice(0, 7))}
+                    {renderAlbums("Focus", shuffledAlbumList.slice(0, 7))}
+                    {renderAlbums("Spotify's Playlists", shuffledAlbumList1.slice(0, 7).reverse())}
+                    {renderAlbums("Focus", shuffledAlbumList2.slice(0, 7))}
                 </div>
                 )}
         </>
