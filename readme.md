@@ -26,9 +26,7 @@ yarn dev
 ```
 
 - Or, go to 
-```bash
 https://ashwinspotifyclone.onrender.com/
-```
 
 ## Compatibility
 
