@@ -6,7 +6,6 @@ import { useRecoilValue } from 'recoil'
 // eslint-disable-next-line react/prop-types
 const ProtectedRoute = ({ children }) => {
     const loggedIn = useRecoilValue(user);
-    console.log(loggedIn)
 
     return (
         <div>
