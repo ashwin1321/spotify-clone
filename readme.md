@@ -25,6 +25,11 @@ yarn
 yarn dev
 ```
 
+- OR
+``` go to 
+https://ashwinspotifyclone.onrender.com/
+```
+
 ## Compatibility
 
 - Compatible on web browsers only. ( Not for mobile devices )
