@@ -1,11 +1,8 @@
 ## Brief
 
-- Building a Feature Rich UI with React JS ( Spotify Clone )
-- Building a responsive UI with React Bootstrap
-- Authentication and Authorization with React JS
-- Integrating React JS with REST API
-- Use Recoil for managing states or API functions
-- Code optimization and performance tuning for React JS
+- Spotify clone using reactJS
+- Static data is used to display cards
+- But, signup and login are functional unlike other feature
 
 ## Tech Stack
 
