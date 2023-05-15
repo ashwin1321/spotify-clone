@@ -79,7 +79,6 @@ const InsidePlaylist = () => {
                             </div>
                         </div>
                         {shuffleSongsList.map((song, index) => {
-                            console.log(song);
                             return (
                                 <div key={index} className="d-flex align-items-center table-roww p-2">
                                     <div className="col-1 col1">{index + 1}</div>
