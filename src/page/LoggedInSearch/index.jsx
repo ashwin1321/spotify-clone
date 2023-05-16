@@ -1,4 +1,3 @@
-import React from 'react'
 import "./logSearch.css"
 import { Button } from 'react-bootstrap'
 import { Container, Row, Col, Card, CardBody, CardText } from 'reactstrap'

@@ -1,4 +1,3 @@
-import React from 'react'
 import './listSidebar.css'
 
 const index = ({ icon, title }) => {

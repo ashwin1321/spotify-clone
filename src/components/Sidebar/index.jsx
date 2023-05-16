@@ -1,15 +1,15 @@
-import React from 'react'
 import logo from '../../assets//logo/spotify.png'
 import { AiFillHome, AiOutlineSearch, AiFillHeart } from 'react-icons/ai'
 import { BiLibrary } from 'react-icons/bi'
 import { BsPlusSquare } from 'react-icons/bs'
 import { Image } from 'react-bootstrap';
-import ListSidebar from '../listSidebar';
+import ListSidebar from '../ListSidebar';
 import { NavLink, useLocation } from 'react-router-dom'
 import './sidebar.css'
 
 const index = () => {
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const location = useLocation();
 
     const icons1 = [{

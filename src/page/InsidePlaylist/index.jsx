@@ -6,7 +6,7 @@ import { GiHearts } from "react-icons/gi";
 import { AiOutlineClockCircle, AiOutlineHeart } from "react-icons/ai";
 import { Image } from "react-bootstrap";
 import avatar from "../../assets/image/avatar.jpg";
-import { user } from "../../recoil/recoilState"
+import { user } from "../../store/recoilState"
 import { useRecoilValue } from "recoil";
 import { shuffleArray, songsList } from "../../utils/songsAndAlbums";
 import "./indise.css"

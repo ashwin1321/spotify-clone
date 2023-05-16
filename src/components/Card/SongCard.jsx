@@ -1,8 +1,9 @@
 import { BsFillPlayFill } from "react-icons/bs";
-import { Button, Card, CardBody, CardText, Col } from "reactstrap";
+import { Button, Card, CardBody, CardText } from "reactstrap";
 import "./songcard.css"
 
-const SongCard = ({ id, imgSrc, title, subtitle }) => {
+// eslint-disable-next-line react/prop-types
+const SongCard = ({ imgSrc, title, subtitle }) => {
     return (
         <div className="col-md-2 p-0 w-100">
             <Card className="cardComp border-0 rounded-3 p-3">

@@ -2,7 +2,8 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { Button, Card, CardBody, CardText, } from "reactstrap";
 import "./Homecard.css"
 
-const HomeDashboardCard = ({ id, imgSrc, title, subtitle }) => {
+// eslint-disable-next-line react/prop-types
+const HomeDashboardCard = ({ imgSrc, title }) => {
     return (
         <div className="col-md-2 p-0 border-5 w-100">
             <Card className="cardComp  d-flex flex-row justify-content-center align-items-center cardsss border-0 rounded-3 gap-3  ">

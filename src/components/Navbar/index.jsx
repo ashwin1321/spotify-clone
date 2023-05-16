@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, useMatch, useNavigate } from 'react-router-dom';
@@ -6,7 +6,7 @@ import './navbar.css';
 import { Input } from 'reactstrap';
 import Avatar from '../Card/Avatar';
 import { useRecoilValue } from 'recoil';
-import { user } from '../../recoil/recoilState'
+import { user } from '../../store/recoilState'
 
 function Navbars() {
     const navigate = useNavigate();

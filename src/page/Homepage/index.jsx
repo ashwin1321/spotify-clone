@@ -1,7 +1,7 @@
 import { Container } from "reactstrap";
 import './homepage.css'
-import HomeDashboardCard from "../../components/Card/homeDashboad";
-import { user } from "../../recoil/recoilState"
+import HomeDashboardCard from "../../components/Card/HomeDashboad";
+import { user } from "../../store/recoilState"
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { shuffleArray, albumList, songsList } from "../../utils/songsAndAlbums";

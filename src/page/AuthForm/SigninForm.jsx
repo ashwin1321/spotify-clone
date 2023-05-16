@@ -1,19 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
+import { useState } from "react";
 import { Form, FormGroup, Label, Input, Button, Container } from "reactstrap";
 import { Image } from "react-bootstrap";
-import { Alert, Toggle } from "reactstrap"
+import { Alert } from "reactstrap"
 import "./login.css";
 import "./signin.css";
 import logo from "../../assets/logo/spotify.png";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
-import auth from "../../utils/firebase"
+import auth from "../../config/firebase/firebase"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
 const signinForm = () => {
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const navigate = useNavigate();
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [email, setEmail] = useState("");

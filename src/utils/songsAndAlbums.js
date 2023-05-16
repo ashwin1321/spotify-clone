@@ -1,4 +1,4 @@
-import { albums, songs } from "../assets/data/spotify";
+import { albums, songs } from "../config/data/spotify";
 
 
 export function shuffleArray(array) {

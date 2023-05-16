@@ -1,13 +1,12 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
-import { RouterProvider, createBrowserRouter, useNavigate } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './page/Homepage/index';
-import LoginForm from './page/forms/loginForm';
-import SignInForm from './page/forms/signinForm';
+import LoginForm from './page/AuthForm/LoginForm';
+import SignInForm from './page/AuthForm/SigninForm';
 import ErrorPage from './page/ErrorPage.jsx';
 import SearchPage from './page/SearchPage';
 import { RecoilRoot } from 'recoil';

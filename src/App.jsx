@@ -1,11 +1,10 @@
-import React from 'react';
-import Sidebar from './components/sidebar';
+import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import { Container, Row, Col } from 'reactstrap';
 import { Outlet } from 'react-router-dom';
 import PlaySongs from './components/Card/PlayCard';
-import { user } from './recoil/recoilState'
+import { user } from './store/recoilState'
 import { useRecoilValue } from 'recoil';
 import './App.css';
 

@@ -1,6 +1,5 @@
-import React from 'react'
 import { Navigate } from 'react-router-dom'
-import { user } from '../recoil/recoilState'
+import { user } from '../store/recoilState'
 import { useRecoilValue } from 'recoil'
 
 // eslint-disable-next-line react/prop-types
