@@ -27,7 +27,7 @@ function Navbars() {
                         <div className='arrow' onClick={() => navigate(-1)}>
                             {"<"}
                         </div>
-                        <div className='arrow' onClick={() => navigate(0)}>
+                        <div className='arrow' onClick={() => navigate(1)}>
                             {">"}
                         </div>
                     </div>
