@@ -11,3 +11,9 @@
   height: 45px !important;
   filter: blur(0.5px);
 }
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

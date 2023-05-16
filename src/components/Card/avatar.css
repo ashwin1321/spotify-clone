@@ -15,3 +15,10 @@
 .avatar {
   margin-right: 0px !important;
 }
+
+@media screen and (max-width: 1300px) {
+  .btn11 {
+    width: 14vw !important;
+    padding: 10px !important;
+  }
+}

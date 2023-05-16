@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import PlaySongs from './components/Card/PlayCard';
 import { user } from './recoil/recoilState'
 import { useRecoilValue } from 'recoil';
+import './App.css';
 
 function App() {
 
@@ -16,10 +17,10 @@ function App() {
     <>
       <Container fluid className="p-0">
         <Row className="m-0">
-          <Col md={2} className="position-fixed p-0 ">
+          <Col lg={2} className="position-fixed p-0 d-none d-lg-block siddebar">
             <Sidebar />
           </Col>
-          <Col md={10} className="p-0 offset-2 " >
+          <Col lg={10} md={12} className="p-0 offset-lg-2  contentt" >
             <Navbar />
             <Outlet />
             <Footer />

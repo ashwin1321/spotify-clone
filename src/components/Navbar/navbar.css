@@ -29,6 +29,7 @@
   cursor: pointer;
   border-radius: 50px;
 }
+
 .nav-inside {
   display: flex;
   justify-content: space-between;
