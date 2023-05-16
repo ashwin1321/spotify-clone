@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap'
 import { Container, Row, Col, Card, CardBody, CardText } from 'reactstrap'
 import { BsFillPlayFill } from "react-icons/bs";
 import { shuffleArray, songsList } from '../../utils/songsAndAlbums'
-import { renderSongs } from '../../utils/RenderData'
+import { renderSongs } from '../../components/Card/RenderData'
 
 const index = () => {
 

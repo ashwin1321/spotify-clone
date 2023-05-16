@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "reactstrap";
 import { Link } from "react-router-dom";
-import SongCard from "../components/Card/SongCard.jsx";
+import SongCard from "./SongCard.jsx";
 
 
 export const renderAlbums = (sectionTitle, albums) => {

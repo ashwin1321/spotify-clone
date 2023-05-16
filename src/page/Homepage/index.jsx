@@ -5,7 +5,7 @@ import { user } from "../../recoil/recoilState"
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { shuffleArray, albumList, songsList } from "../../utils/songsAndAlbums";
-import { renderAlbums, renderSongs } from "../../utils/RenderData";
+import { renderAlbums, renderSongs } from "../../components/Card/RenderData";
 
 const Home = () => {
 
